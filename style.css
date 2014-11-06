@@ -963,7 +963,7 @@ header.navigation {
     background: white; }
 
 .footer {
-  background: url("images/bg-footer.jpg") no-repeat scroll center top/cover;
+  background: #2C4F77  url("images/bg-footer.jpg") no-repeat scroll center top/cover;
   padding: 3em 1.618em;
   width: 100%; }
   .footer a {
