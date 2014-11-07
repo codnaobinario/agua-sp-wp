@@ -53,10 +53,10 @@
         </ul>
       </div>
       <div class="navigation-tools">
-        <a class="icon facebook" href="https://www.facebook.com/aguaemsp"><img src="images/icon-facebook.svg" alt="Facebook"></a>
-        <a class="icon twitter" href="https://www.twitter.com/aguaemsp"><img src="images/icon-twitter.svg" alt="Twitter"></a>
-        <a class="icon gplus" href="https://plus.google.com/117674143282441096563/about"><img src="images/icon-gplus.svg" alt="Google Plus"></a>
-        <a class="icon youtube" href="https://www.youtube.com/user/aguaemsp"><img src="images/icon-youtube.svg" alt="Youtube"></a>
+        <a class="icon facebook" href="https://www.facebook.com/aguaemsp"><img src="<?php echo get_template_directory_uri();?>/images/icon-facebook.svg" alt="Facebook"></a>
+        <a class="icon twitter" href="https://www.twitter.com/aguaemsp"><img src="<?php echo get_template_directory_uri();?>/images/icon-twitter.svg" alt="Twitter"></a>
+        <a class="icon gplus" href="https://plus.google.com/117674143282441096563/about"><img src="<?php echo get_template_directory_uri();?>/images/icon-gplus.svg" alt="Google Plus"></a>
+        <a class="icon youtube" href="https://www.youtube.com/user/aguaemsp"><img src="<?php echo get_template_directory_uri();?>/images/icon-youtube.svg" alt="Youtube"></a>
       </div>
     </div>
   </header>
