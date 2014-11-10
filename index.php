@@ -5,4 +5,5 @@
 <?php get_template_part('solucoes'); ?>
 <?php get_template_part('quem'); ?>
 <?php get_template_part('parceiros'); ?>
+<?php get_template_part('agenda'); ?>
 <?php get_footer(); ?>
