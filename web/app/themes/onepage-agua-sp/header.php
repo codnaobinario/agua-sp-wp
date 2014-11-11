@@ -20,7 +20,7 @@
 
   <!-- Open Graph data -->
   <meta property="og:title" content="Aliança pela Água">
-  <meta property="og:type" content="site">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="<?php bloginfo('url'); ?>">
   <meta property="og:image" content="<?php echo get_template_directory_uri();?>/images/social.png">
   <meta property="og:description" content="<?php bloginfo('description'); ?>">
