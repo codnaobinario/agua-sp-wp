@@ -19,7 +19,7 @@
     </div>
     <div class="report-download">
       <div class="report-box">
-        <?php 
+        <?php
         $apoiar = get_page_by_title('Apoiar');
         $attachments = get_posts(array('post_type' => 'attachment', 'post_parent' => $apoiar->ID));
         $report = reset($attachments);
@@ -28,7 +28,7 @@
         <div class="report-link">
           <a href="<?php echo $report->guid;?>">
             <img src="<?php echo get_template_directory_uri();?>/images/report-icon.svg">
-            <h5>carta da aliança</h5>
+            <h5>Carta da aliança</h5>
           </a>
         </div>
       </div>

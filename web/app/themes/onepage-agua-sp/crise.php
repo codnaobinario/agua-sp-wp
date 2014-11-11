@@ -73,7 +73,7 @@
       <div class="report-link">
         <a href="<?php echo get_template_directory_uri();?>/files/Agua_SP_PropCurto_29Out.pdf">
           <img src="<?php echo get_template_directory_uri();?>/images/report-icon-azul.svg">
-          <h5>Baixar relatório completo</h5>
+          <h5>Apresentação dos resultados</h5>
         </a>
       </div>
     </div>

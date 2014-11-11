@@ -6,25 +6,25 @@
   <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Aliança pela Água</title>
+  <title><?php bloginfo('title'); ?></title>
   <meta name="description" content="<?php bloginfo('description'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="summary">
   <!--meta name="twitter:site" content="@"-->
-  <meta name="twitter:title" content="Aliança pela Água">
+  <meta name="twitter:title" content="<?php bloginfo('title'); ?>">
   <meta name="twitter:description" content="Estou assistindo ao vivo o lançamento do Água@SP. Assista comigo nesse link: http://aguasp.socioambiental.org/">
   <!--meta name="twitter:creator" content="@"-->
-  <meta name="twitter:image" content="http://aguasp.socioambiental.org/images/social.png">
+  <meta name="twitter:image" content="<?php echo get_template_directory_uri();?>/images/social.png">
 
   <!-- Open Graph data -->
   <meta property="og:title" content="Aliança pela Água">
   <meta property="og:type" content="site">
-  <meta property="og:url" content="http://aguasp.socioambiental.org/">
-  <meta property="og:image" content="http://aguasp.socioambiental.org/images/social.png">
+  <meta property="og:url" content="<?php bloginfo('url'); ?>">
+  <meta property="og:image" content="<?php echo get_template_directory_uri();?>/images/social.png">
   <meta property="og:description" content="<?php bloginfo('description'); ?>">
-  <meta property="og:site_name" content="Aliança pela Água">
+  <meta property="og:site_name" content="<?php bloginfo('title'); ?>">
   <meta property="fb:admins" content="">
 
   <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/style.css">
@@ -37,7 +37,7 @@
 <body>
   <header class="navigation">
     <div class="navigation-wrapper">
-      <a href="index.html" class="logo">
+      <a href="<?php bloginfo('url'); ?>" class="logo">
         <img src="<?php echo get_template_directory_uri();?>/images/logo-small.svg" alt="Aliança pela Água">
       </a>
       <a href="" class="navigation-menu-button" id="js-mobile-menu">MENU</a>

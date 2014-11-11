@@ -14,10 +14,10 @@
               <li><a href="mailto:cadastro_online@socioambiental.org">contato</a></li>
             </ul>
             <ul class="social-icons">
-              <li><a class="icon facebook" href="https://www.facebook.com/aguaemsp"><img src="images/icon-facebook.svg" alt="Facebook"></a></li>
-              <li><a class="icon twitter" href="https://www.twitter.com/aguaemsp"><img src="images/icon-twitter.svg" alt="Twitter"></a></li>
-              <li><a class="icon gplus" href="https://plus.google.com/117674143282441096563/about"><img src="images/icon-gplus.svg" alt="Google Plus"></a></li>
-              <li><a class="icon youtube" href="https://www.youtube.com/user/aguaemsp"><img src="images/icon-youtube.svg" alt="Youtube"></a></li>
+              <li><a class="icon facebook" href="https://www.facebook.com/aguaemsp"><img src="<?php echo get_template_directory_uri();?>/images/icon-facebook.svg" alt="Facebook"></a></li>
+              <li><a class="icon twitter" href="https://www.twitter.com/aguaemsp"><img src="<?php echo get_template_directory_uri();?>/images/icon-twitter.svg" alt="Twitter"></a></li>
+              <li><a class="icon gplus" href="https://plus.google.com/117674143282441096563/about"><img src="<?php echo get_template_directory_uri();?>/images/icon-gplus.svg" alt="Google Plus"></a></li>
+              <li><a class="icon youtube" href="https://www.youtube.com/user/aguaemsp"><img src="<?php echo get_template_directory_uri();?>/images/icon-youtube.svg" alt="Youtube"></a></li>
             </ul>
           </div>
         </div>
