@@ -43,7 +43,7 @@ $table_prefix = getenv('DB_PREFIX') ? getenv('DB_PREFIX') : 'wp_';
  *
  * A corresponding MO file for the chosen language must be installed to app/languages
  */
-define('WPLANG', '');
+define('WPLANG', 'pt_BR');
 
 /**
  * Authentication Unique Keys and Salts
