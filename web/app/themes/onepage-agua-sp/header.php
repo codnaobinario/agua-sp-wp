@@ -45,7 +45,7 @@
 
     <p><strong>São Paulo, 12 de novembro de 2014</strong> - Desde o início deste ano, os indícios de que São Paulo viveria a pior crise hídrica de sua história eram claros. Com medo da reação da opinião pública durante o período eleitoral, os governos adiaram medidas de contenção. A inação política agravou o cenário de estiagem. Mais de 60 municípios já enfrentam cortes no fornecimento e o racionamento atinge milhões de pessoas.</p>
 
-    <p>Passadas duas semanas do fim da eleições, na última segunda-feira, dia 10/11, o governador Geraldo Alckmin por fim reuniu-se com a presidenta Dilma Rousseff em Brasília para pedir apoio a um pacote bilionário de obras hídricas no Estado de São Paulo. As medidas propostas, como a interligação dos reservatórios e a construção de novas represas, embora aparentemente "volumosas", falham em responder à crise, não garantem transparência e participação da sociedade e não criam mecanismos robustos para promover a segurança hídrica do Estado.</p>
+    <p>Passadas duas semanas do fim da eleições, na última segunda-feira, dia 10/11, o governador Geraldo Alckmin por fim reuniu-se com a presidente Dilma Rousseff em Brasília para pedir apoio a um pacote bilionário de obras hídricas no Estado de São Paulo. As medidas propostas, como a interligação dos reservatórios e a construção de novas represas, embora aparentemente "volumosas", falham em responder à crise, não garantem transparência e participação da sociedade e não criam mecanismos robustos para promover a segurança hídrica do Estado.</p>
 
     <p>Especialistas em recursos hídricos e mudanças climáticas apontam quatro fatores que deram origem à crise: a) ênfase dos governos na retirada de mais água, e não no uso racional desse recurso; b) desmatamento nas áreas de mananciais e poluição das fontes de água em quase todo o Estado; c) seca extrema e déficit de chuvas, em especial  no Sistema Cantareira;  d) pouco espaço de participação social e transparência na gestão da água.</p>
 
@@ -95,7 +95,7 @@
     <p class="center">Instituto Akatu</p>
     <p class="center">Instituto ATÁ</p>
     <p class="center">Instituto Auá de Empreendedorismo Socioambiental</p>
-    <p class="center">IDEC - Instituto de Defesa do Consumidor</p>
+    <p class="center">IDEC - Instituto Brasileiro de Defesa do Consumidor</p>
     <p class="center">Instituto Mutirão</p>
     <p class="center">IPÊ - Instituto de Pesquisas Ecológicas</p>
     <p class="center">Instituto Socioambiental</p>
