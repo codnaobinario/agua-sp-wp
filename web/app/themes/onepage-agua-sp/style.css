@@ -1302,9 +1302,10 @@ section {
   overflow: auto;
 }
 
-#modal-industria-seca .content .lista,
+/*#modal-industria-seca .content .lista,*/
 #modal-industria-seca .content .lista li {
-  list-style: disc;
+  list-style: square;
+  display: block;
 }
 #modal-industria-seca .content .center {
   text-align: center;
