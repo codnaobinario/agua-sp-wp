@@ -131,6 +131,5 @@ function render() {
 
 $('.single-item').slick();
 
-
-
+$('#modal-industria-seca').modal({opacity: 0.5});
 
