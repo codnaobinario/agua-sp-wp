@@ -1,0 +1,54 @@
+#a-crise {
+  background-color: #F0F0F0;
+
+  .report-download {
+    .report-box {
+      .report-link {
+          color: #2C4F77;
+      }
+    }
+  }
+  .slider {
+    > div {
+      background-color: #F0F0F0;
+      height: 457px;
+      border: 0px solid #2C4F77;
+    }
+
+    > img {
+      width: 100%;
+    }
+
+    .texto-destaque {
+      h3 {
+        text-align: center;
+        margin: 230px 0;
+        text-transform: uppercase;
+        line-height: 1.3em;
+      }
+    }
+
+    h4 {
+      margin: 2em 2.5em 1em;
+    }
+
+    ul.colunas {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      margin: 0 4em 0;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #a-crise .slider ul.colunas {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+
+  .slide {
+    height: auto;
+  }
+}

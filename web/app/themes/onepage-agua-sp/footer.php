@@ -31,11 +31,11 @@
         </div>
       </div>
     </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri();?>/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
     <script src="<?php echo get_template_directory_uri();?>/js/vendor/jquery-modal/jquery.modal.min.js" type="text/javascript"></script>
-    <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
     <script src='<?php echo get_template_directory_uri();?>/js/vendor/slick/slick.min.js'></script>
+    -->
 
     <script>
       window.fbAsyncInit = function() {
@@ -68,6 +68,7 @@
 
       ga('create','UA-720697-34');ga('send','pageview');
     </script>
-    <script src="<?php echo get_template_directory_uri();?>/js/main.js"></script>
+    <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+    <script src="<?php echo get_template_directory_uri();?>/build/bundle.js"></script>
   </body>
 </html>

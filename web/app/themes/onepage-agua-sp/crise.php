@@ -6,18 +6,18 @@
       <h3>As principais fontes de São Paulo estão secando</h3>
     </div>
     <div>
-      <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide3.PNG" alt="">
+      <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide3.png" alt="">
     </div>
     <div>
-      <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide8.PNG" alt="">
+      <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide8.png" alt="">
     </div>
     <div>
-      <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide9.PNG" alt="">
+      <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide9.png" alt="">
     </div>
     <div class="texto-destaque">
       <h3>Sem chuva, a situação se agrava. Estamos no volume morto</h3>
     </div>
-    <div><img src="<?php echo get_template_directory_uri();?>/images/slides/Slide6.PNG" alt=""></div>
+    <div><img src="<?php echo get_template_directory_uri();?>/images/slides/Slide6.png" alt=""></div>
     <div class="texto-destaque">
       <h3>Os manancias continuam a ser degradados</h3>
     </div>
@@ -33,7 +33,7 @@
     <div class="texto-destaque">
       <h3>A falta de água em São Paulo foi causada por muitos fatores:</h3>
     </div>
-    <div><img src="<?php echo get_template_directory_uri();?>/images/slides/Slide2.PNG" alt=""></div>
+    <div><img src="<?php echo get_template_directory_uri();?>/images/slides/Slide2.png" alt=""></div>
     <div class="texto-destaque">
       <h3>Gestão baseada em fontes inesgotáveis<br/>
         Degradação dos Mananciais <br/>

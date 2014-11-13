@@ -1,0 +1,22 @@
+{
+  "name": "onepage-agua-sp",
+  "version": "0.0.1",
+  "description": "Compilador de arquivos sass para css",
+  "repository": "git@github.com:nucleo-digital/agua-sp-wp.git",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Pirola",
+  "license": "GPL v3",
+  "dependencies": {
+    "gulp-embedlr": "~0.5.2",
+    "gulp-ruby-sass": "~0.7.1",
+    "gulp-concat": "~2.4.1",
+    "tiny-lr": "~0.1.4",
+    "gulp": "~3.8.10",
+    "gulp-browserify": "~0.5.0",
+    "gulp-imagemin": "~1.2.1",
+    "jquery": "~2.1.1"
+  }
+}

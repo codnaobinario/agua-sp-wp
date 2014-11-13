@@ -1,6 +1,10 @@
 /* globals jQuery, Modernizr */
+var $ = require('jquery');
+window.jQuery = $;
 
-(function ($) {
+var modal = require('./vendor/jquery-modal/jquery.modal.min');
+var slick = require('./vendor/slick/slick.min');
+
   'use strict';
 
   $(function () {
@@ -52,17 +56,6 @@
     salvarUsuario({name: name, email: email});
   });
 
-  // myDataRef.on('child_added', function(snapshot) {
-  //   var message = snapshot.val();
-  //   displayChatMessage(message.name, message.email);
-  // });
-
-  // function displayChatMessage(name, text) {
-  //   $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
-  //   $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-  // };
-})(jQuery);
-
   var myDataRef = new Firebase('https://popping-heat-3998.firebaseio.com/');
 
   function salvarUsuario (obj) {
@@ -104,7 +97,7 @@ function signinCallback(authResult) {
     // Autorizado com sucesso
     // Ocultar o botão de login agora que o usuário está autorizado, por exemplo:
     // console.log(authResult);
-    jQuery.getJSON('https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token='+authResult['access_token'])
+    $.getJSON('https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token='+authResult['access_token'])
       .done(function(data){
         // console.log(data);
         salvarUsuario({name: data.name, email: data.email, google: data});

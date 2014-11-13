@@ -1,0 +1,69 @@
+#agenda {
+  background: #F0F0F0;
+  .actions {
+    @include outer-container;
+
+    .type {
+      @include span-columns(6);
+      padding: 0 1.5em;
+
+      h4 {
+        background: #2C4F77;
+        color: #87DB75;
+        padding: 10px 30px 10px 10px;
+        text-transform: uppercase;
+        font-size: 1.3em;
+        margin-bottom: 10px;
+        @include media($medium-screen) {
+          font-size: 1.3em;
+          height: 7em;
+        }
+        @include media($large-screen) {
+          font-size: 1.8em;
+          height: 5em;
+        }
+      }
+      h5 {
+        font-size: 1.4em;
+        margin-bottom: 1em;
+      }
+      p {
+        margin-bottom: 1em;
+      }
+    }
+  }
+  .half {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    padding :0 1.5em;
+
+    &.right {
+      text-align: right;
+    }
+  }
+  ol {
+   list-style-type: decimal;
+   li {
+     margin-left: 2em;
+     padding-left: 0.5em;
+   }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+
+  #agenda {
+    .half {
+      width: 100%;
+    }
+  }
+
+  iframe {
+    width :100%;
+  }
+    #agenda .actions .type {
+    width: 100%;
+
+  }
+}
