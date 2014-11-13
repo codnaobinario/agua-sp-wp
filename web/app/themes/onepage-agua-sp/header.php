@@ -114,6 +114,8 @@
     <p class="center">Volume Vivo</p>
     <p class="center">WWF- Brasil</p>
     <p class="center">WRI Brasil</p>
+    <p class="center">Juntos por outro futuro</p>
+    <p class="center">Instituto Democracia e Sustentabilidade</p>
   </div>
 </div>
   <header class="navigation">
