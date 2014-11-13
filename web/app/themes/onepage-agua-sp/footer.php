@@ -69,6 +69,6 @@
       ga('create','UA-720697-34');ga('send','pageview');
     </script>
     <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
-    <script src="<?php echo get_template_directory_uri();?>/build/bundle.js"></script>
+    <script src="<?php echo get_template_directory_uri();?>/bundle.js"></script>
   </body>
 </html>

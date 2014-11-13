@@ -43,7 +43,7 @@ gulp.task('browserify', function(){
   gulp.src('js/*.js')
    .pipe(browserify())
    .pipe(concat('bundle.js'))
-   .pipe(gulp.dest('build'));
+   .pipe(gulp.dest('./'));
    // .pipe(refresh(lrserver));
 
 });
