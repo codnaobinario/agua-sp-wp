@@ -22,7 +22,6 @@
   .hero-inner {
     @include outer-container;
     @include clearfix;
-    // padding: 3em;
     margin: auto;
     text-align: center;
     color: $hero-color;
@@ -52,21 +51,57 @@
         margin: auto;
         margin-bottom: 1em;
         font-weight: 200;
-        line-height: 1.4em;
 
         @include media($large-screen) {
-          font-size: 1.5em;
-          max-width: 65%;
+          max-width: 80%;
         }
       }
 
       h2 {
         text-align: center;
-        font-weight: bold;
-        font-size: 1.6em;
-        @include media($medium-screen) {
-          font-size: 2em;
-        }
+        font-size: em(28px);
+      }
+    }
+  }
+
+  #live {
+    // background: #2C4F77;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+
+
+    h5 {
+      display:inline-block;
+      vertical-align: top;
+      margin: .4em;
+      color: #87DB75;
+      font-weight: 200;
+      font-size: 3em;
+      text-align: center;
+    }
+
+    .stream {
+      width: 1050px;
+      margin: auto;
+    }
+
+    a {
+      margin: 0 1em;
+      width: em(95px);
+      height: em(95px);
+      background-color: #8EC975;
+      display:inline-block;
+      // border-radius: em(25px);
+      box-shadow: 3px 3px 3px rgba(0,0,0,.4);
+
+      img {
+        background-color: #6EA74A;
+        width: em(75px);
+        height: em(75px);
+        padding: em(10px);
+        margin: em(10px);
+        // border-radius: em(20px);
       }
     }
   }

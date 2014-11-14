@@ -32,7 +32,8 @@ header.navigation {
     float: left;
     max-height: $navigation-height;
     padding-left: $navigation-padding;
-    padding-right: 2em;
+    padding-right: 1em;
+    background-color: #204667;
 
     img {
       max-height: $navigation-height;
@@ -96,7 +97,6 @@ header.navigation {
     display: block;
     line-height: $navigation-height;
     overflow: hidden;
-    padding-right: .8em;
     text-align: right;
     width: 100%;
     z-index: 9999;
@@ -115,19 +115,20 @@ header.navigation {
       font-weight: 400;
 
       @include media ($horizontal-bar-mode) {
-        padding-right: 1em;
+        padding: 0 1em;
       }
 
       &:hover {
         color: $navigation-color-hover;
+        background-color: #204667;
       }
     }
   }
 
-  .active-nav-item a {
-    border-bottom: 1px solid $navigation-active-link-color;
-    padding-bottom: 3px;
-  }
+  // .active-nav-item a {
+  //   border-bottom: 1px solid $navigation-active-link-color;
+  //   padding-bottom: 3px;
+  // }
 
   // Sub menus
 
@@ -284,6 +285,14 @@ header.navigation {
 
     &:hover {
       background: lighten($navigation-nav-button-background, 10);
+    }
+  }
+}
+
+@media screen and (max-device-width: 640px) {
+  header.navigation {
+    ul li.nav-link {
+      padding-right: 1em;
     }
   }
 }

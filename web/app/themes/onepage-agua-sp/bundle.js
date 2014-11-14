@@ -125,7 +125,7 @@ function render() {
 
 $('.single-item').slick();
 
-$('#modal-industria-seca').modal({opacity: 0.5});
+// $('#modal-industria-seca').modal({opacity: 0.5});
 
 
 },{"./vendor/jquery-modal/jquery.modal.min":2,"./vendor/slick/slick.min":3,"jquery":4}],2:[function(require,module,exports){

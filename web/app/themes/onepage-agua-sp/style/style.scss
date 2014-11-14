@@ -9,7 +9,7 @@
 @import "quem";
 @import "cadastro";
 @import "agenda";
-@import "live";
+// @import "live";
 @import "a-crise";
 @import "solucoes";
 
@@ -69,7 +69,7 @@ section {
     margin-left: 1em;
   }
   h2:before {
-    content: url('../images/heading-positive.png');
+    content: url('images/heading-positive.png');
     display: block;
   }
 }
