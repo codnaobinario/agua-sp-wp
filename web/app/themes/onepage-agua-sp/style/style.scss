@@ -9,7 +9,13 @@
 @import "quem";
 @import "cadastro";
 @import "agenda";
-// @import "live";
+
+$slick-font-path: "js/vendor/slick/fonts/";
+$slick-font-family: "slick";
+$slick-loader-path: "js/vendor/slick/";
+
+@import "../js/vendor/slick/slick";
+
 @import "a-crise";
 @import "solucoes";
 
@@ -21,27 +27,6 @@
 
 @import "layout";
 
-$slick-font-path: "js/vendor/slick/fonts/";
-$slick-font-family: "slick";
-$slick-loader-path: "js/vendor/slick/";
-
-@import "../js/vendor/slick/slick";
-
-
-.slick-prev {
-  left: 25px;
-}
-.slick-next {
-  right: 25px;
-}
-.slick-prev, .slick-next {
-  height: 32px;
-  width: 32px;
-}
-.slick-prev:before, .slick-next:before {
-  font-size: 32px;
-  color: #2C4F77;
-}
 
 @import "../js/vendor/jquery-modal/jquery.modal";
 @import "modal-industria-seca";

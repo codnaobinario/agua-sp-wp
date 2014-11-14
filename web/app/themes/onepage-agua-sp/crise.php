@@ -2,7 +2,8 @@
   <div class="container">
     <h2>A crise</h2>
     <div class="slider single-item">
-    <div class="texto-destaque">
+
+    <div class="texto-destaque first-slide">
       <h3>As principais fontes de São Paulo estão secando</h3>
     </div>
     <div>
@@ -69,11 +70,10 @@
   </div>
   <div class="report-download">
     <div class="report-box">
-      <img class="box" src="<?php echo get_template_directory_uri();?>/images/report-box-azul.svg">
       <div class="report-link">
         <a href="<?php echo get_template_directory_uri();?>/files/Agua_SP_PropCurto_29Out.pdf">
-          <img src="<?php echo get_template_directory_uri();?>/images/report-icon-azul.svg">
-          <h5>Apresentação dos resultados</h5>
+          <img src="<?php echo get_template_directory_uri();?>/images/report-icon.svg">
+          <span>Apresentação dos resultados</span>
         </a>
       </div>
     </div>
