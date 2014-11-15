@@ -2,13 +2,17 @@
   background-color: #2C4F77;
   color: #F0F0F0;
 
-  .report-download {
-    .report-box {
-      .report-link {
-          color: #2C4F77;
-      }
-    }
+  h2:before {
+    content: url('images/heading-negative.png');
   }
+
+  // .report-download {
+  //   .report-box {
+  //     .report-link {
+  //         color: #2C4F77;
+  //     }
+  //   }
+  // }
   .slider {
 
     border: 3px dotted #8EC975;
@@ -22,7 +26,11 @@
       // border: 0px solid #2C4F77;
     }
 
-    .first-slide {
+    > img {
+      width: 100%;
+    }
+
+    .texto-destaque {
       background: #2c5078; /* Old browsers */
       background: -moz-linear-gradient(top,  #2c5078 54%, #2c5078 54%, #204667 100%); /* FF3.6+ */
       background: -webkit-gradient(linear, left top, left bottom, color-stop(54%,#2c5078), color-stop(54%,#2c5078), color-stop(100%,#204667)); /* Chrome,Safari4+ */
@@ -32,18 +40,22 @@
       background: linear-gradient(to bottom,  #2c5078 54%,#2c5078 54%,#204667 100%); /* W3C */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c5078', endColorstr='#204667',GradientType=0 ); /* IE6-9 */
       border-radius: 1em;
-    }
+      min-height: 457px;
 
-    > img {
-      width: 100%;
-    }
+      img {
+        margin: 0 auto;
+      }
 
-    .texto-destaque {
       h3 {
         text-align: center;
-        margin: 230px 0;
-        text-transform: uppercase;
         line-height: 1.3em;
+        font-size: em(42px);
+        font-family: 'the_serif_bold-regular';
+        line-height: em(42px);
+        span {
+          font-size: 1.5em;
+          display: block;
+        }
       }
     }
 
@@ -72,6 +84,20 @@
   .slick-prev:before, .slick-next:before {
     font-size: 32px;
     color: #F0F0F0;
+  }
+
+  .report-download {
+    margin-top: -85px;
+    z-index: 99999;
+    position: relative;
+  }
+  .report-box {
+    background-color: #8EC975;
+    width: 30em;
+    margin: 0 auto;
+    span {
+      padding-left: 0;
+    }
   }
 
 }

@@ -4,7 +4,8 @@
     <div class="slider single-item">
 
     <div class="texto-destaque first-slide">
-      <h3>As principais fontes de São Paulo estão secando</h3>
+      <img src="<?php echo get_template_directory_uri();?>/images/icon-estado-sp-agua.svg" alt="">
+      <h3>As principais fontes de São Paulo <span>estão secando</span></h3>
     </div>
     <div>
       <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide3.png" alt="">
@@ -16,7 +17,11 @@
       <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide9.png" alt="">
     </div>
     <div class="texto-destaque">
-      <h3>Sem chuva, a situação se agrava. Estamos no volume morto</h3>
+      <h3>
+        Sem chuva, a situação se agrava.
+        <br/>
+        Estamos no volume morto
+      </h3>
     </div>
     <div><img src="<?php echo get_template_directory_uri();?>/images/slides/Slide6.png" alt=""></div>
     <div class="texto-destaque">
@@ -69,14 +74,10 @@
     </div>
   </div>
   <div class="report-download">
-    <div class="report-box">
-      <div class="report-link">
-        <a href="<?php echo get_template_directory_uri();?>/files/Agua_SP_PropCurto_29Out.pdf">
-          <img src="<?php echo get_template_directory_uri();?>/images/report-icon.svg">
-          <span>Apresentação dos resultados</span>
-        </a>
-      </div>
-    </div>
+    <a href="<?php echo get_template_directory_uri();?>/files/Agua_SP_PropCurto_29Out.pdf" class="report-box">
+      <img src="<?php echo get_template_directory_uri();?>/images/report-icon.svg">
+      <span>Apresentação dos resultados</span>
+    </a>
   </div>
   </div>
 </section>

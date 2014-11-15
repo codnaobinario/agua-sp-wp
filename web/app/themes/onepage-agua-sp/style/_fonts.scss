@@ -20,3 +20,15 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'the_serif_bold-regular';
+    src: url('fonts/theserif_bold_plain-webfont.eot');
+    src: url('fonts/theserif_bold_plain-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/theserif_bold_plain-webfont.woff2') format('woff2'),
+         url('fonts/theserif_bold_plain-webfont.woff') format('woff'),
+         url('fonts/theserif_bold_plain-webfont.ttf') format('truetype'),
+         url('fonts/theserif_bold_plain-webfont.svg#the_serif_bold-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
