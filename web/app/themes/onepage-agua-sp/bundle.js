@@ -128,6 +128,30 @@ $('.single-item').slick();
 // $('#modal-industria-seca').modal({opacity: 0.5});
 
 
+jQuery(".post-like a").click(function(){
+
+  var heart = jQuery(this);
+
+  // Retrieve post ID from data attribute
+  var post_id = heart.data("post_id");
+
+  // Ajax call
+  jQuery.ajax({
+      type: "post",
+      url: ajax_var.url,
+      data: "action=post-like&nonce="+ajax_var.nonce+"&post_like=&post_id="+post_id,
+      success: function(count){
+          // If vote successful
+          if(count != "already")
+          {
+              heart.addClass("voted");
+              heart.siblings(".count").text(count);
+          }
+      }
+  });
+
+  return false;
+})
 },{"./vendor/jquery-modal/jquery.modal.min":2,"./vendor/slick/slick.min":3,"jquery":4}],2:[function(require,module,exports){
 /*
     A simple jQuery modal (http://github.com/kylefox/jquery-modal)

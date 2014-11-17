@@ -3,7 +3,9 @@
     <h5>QUER SOLUCIONAR ESSES PROBLEMAS? ESCOLHA AS MELHORES INICIATIVAS OU PROPONHA A SUA.</h5>
 
     <?php
-      $solucoes = get_posts(array('category' => 'Soluções'));
+      // meta_key=votes_count&orderby=meta_value_num&order=DESC&
+      $solucoes = query_posts('category=Soluções');
+// var_dump($solucoes);
       foreach($solucoes as $solucao):
     ?>
       <div class="solucao">
@@ -14,6 +16,7 @@
         <div class="content">
           <h6><?php echo $solucao->post_title;?></h6>
           <!-- <?php echo $solucao->post_content;?> -->
+          <?php echo getPostLikeLink($solucao->ID);?>
         </div>
       </div>
       </div>

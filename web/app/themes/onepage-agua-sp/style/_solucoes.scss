@@ -36,7 +36,29 @@
     }
     // article { @include span-columns(9); }
 
+    .post-like{
+      margin-top:1em
+    }
 
+    .like{
+      background:url(images/icons.png) no-repeat;
+      width: 15px;
+      height: 16px;
+      display: block;
+      float:left;
+      margin-right: 4px;
+      -moz-transition: all 0.2s ease-out 0.1s;
+      -webkit-transition: all 0.2s ease-out 0.1s;
+      -o-transition: all 0.2s ease-out 0.1s
+    }
+
+    .post-like a:hover .like{
+      background-position:-16px 0;
+    }
+
+    .voted .like, article footer .post-like.alreadyvoted{
+      background-position:-32px 0;
+    }
 
   // ul {
   //   padding: 1em 2em 0;

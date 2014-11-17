@@ -771,6 +771,22 @@ input[type="submit"] {
       font-size: 1.25em;
       color: #8EC975;
       font-weight: normal; }
+  #solucoes .post-like {
+    margin-top: 1em; }
+  #solucoes .like {
+    background: url(images/icons.png) no-repeat;
+    width: 15px;
+    height: 16px;
+    display: block;
+    float: left;
+    margin-right: 4px;
+    -moz-transition: all 0.2s ease-out 0.1s;
+    -webkit-transition: all 0.2s ease-out 0.1s;
+    -o-transition: all 0.2s ease-out 0.1s; }
+  #solucoes .post-like a:hover .like {
+    background-position: -16px 0; }
+  #solucoes .voted .like, #solucoes article footer .post-like.alreadyvoted {
+    background-position: -32px 0; }
 
 header.navigation {
   background-color: #2C4F77;
