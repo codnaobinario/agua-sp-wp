@@ -1,5 +1,5 @@
 #solucoes {
-  background-color: #D5D5D5;
+  background-color: #fff;
 
   h5 {
     font-size: 1em;
@@ -7,38 +7,69 @@
     margin: 1em 2em;
   }
 
-  ul {
-    padding: 1em 2em 0;
-    li {
-      border-bottom: 1px solid #2C4F77;
-      margin-bottom: .1em;
-      padding-bottom: .1em;
-      img,.content {
-        vertical-align: top;
-        display: inline-block;
-      }
-      img {
-        width: 20%;
-        padding-right: 1em;
+
+
+    @include outer-container;
+
+    .solucao {
+      @include span-columns(6);
+      @include omega(2n);
+
+      background-color: #2C5078;
+      border-radius: 20px;
+      margin-bottom: 1em;
+      padding: 1em;
+      color: #fff;
+
+      .thumb-image,
+      .content {
+        @include span-columns(6);
+        @include omega(2n);
       }
       h6 {
-        margin-bottom: .5em;
-        font-size: 1.3em;
+        font-family: 'the_serif_bold-regular';
+        font-size: em(20px);
+        color: #8EC975;
+        font-weight: normal;
       }
-      .content {
-        width: 76%;
-      }
-      p {
-        font-size: .85em;
-        line-height: 1em;
-        margin:.2em;
-        span {
-          font-weight: bold;
-        }
-      }
-      .description {
-        margin-bottom: 1em;
-      }
+
     }
-  }
+    // article { @include span-columns(9); }
+
+
+
+  // ul {
+  //   padding: 1em 2em 0;
+  //   li {
+  //     border-bottom: 1px solid #2C4F77;
+  //     margin-bottom: .1em;
+  //     padding-bottom: .1em;
+  //     img,.content {
+  //       vertical-align: top;
+  //       display: inline-block;
+  //     }
+  //     img {
+  //       width: 20%;
+  //       padding-right: 1em;
+  //     }
+  //     h6 {
+  //       margin-bottom: .5em;
+  //       font-size: 1.3em;
+  //     }
+  //     .content {
+  //       width: 76%;
+  //     }
+  //     p {
+  //       font-size: .85em;
+  //       line-height: 1em;
+  //       margin:.2em;
+  //       span {
+  //         font-weight: bold;
+  //       }
+  //     }
+  //     .description {
+  //       margin-bottom: 1em;
+  //     }
+  //   }
+  // }
 }

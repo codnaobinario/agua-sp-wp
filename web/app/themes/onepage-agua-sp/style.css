@@ -723,36 +723,54 @@ input[type="submit"] {
   .slide {
     height: auto; } }
 #solucoes {
-  background-color: #D5D5D5; }
+  background-color: #fff;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
   #solucoes h5 {
     font-size: 1em;
     text-align: center;
     margin: 1em 2em; }
-  #solucoes ul {
-    padding: 1em 2em 0; }
-    #solucoes ul li {
-      border-bottom: 1px solid #2C4F77;
-      margin-bottom: .1em;
-      padding-bottom: .1em; }
-      #solucoes ul li img, #solucoes ul li .content {
-        vertical-align: top;
-        display: inline-block; }
-      #solucoes ul li img {
-        width: 20%;
-        padding-right: 1em; }
-      #solucoes ul li h6 {
-        margin-bottom: .5em;
-        font-size: 1.3em; }
-      #solucoes ul li .content {
-        width: 76%; }
-      #solucoes ul li p {
-        font-size: .85em;
-        line-height: 1em;
-        margin: .2em; }
-        #solucoes ul li p span {
-          font-weight: bold; }
-      #solucoes ul li .description {
-        margin-bottom: 1em; }
+  #solucoes:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #solucoes .solucao {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    background-color: #2C5078;
+    border-radius: 20px;
+    margin-bottom: 1em;
+    padding: 1em;
+    color: #fff; }
+    #solucoes .solucao:last-child {
+      margin-right: 0; }
+    #solucoes .solucao:nth-child(2n) {
+      margin-right: 0; }
+    #solucoes .solucao:nth-child(2n+1) {
+      clear: left; }
+    #solucoes .solucao .thumb-image,
+    #solucoes .solucao .content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      #solucoes .solucao .thumb-image:last-child,
+      #solucoes .solucao .content:last-child {
+        margin-right: 0; }
+      #solucoes .solucao .thumb-image:nth-child(2n),
+      #solucoes .solucao .content:nth-child(2n) {
+        margin-right: 0; }
+      #solucoes .solucao .thumb-image:nth-child(2n+1),
+      #solucoes .solucao .content:nth-child(2n+1) {
+        clear: left; }
+    #solucoes .solucao h6 {
+      font-family: 'the_serif_bold-regular';
+      font-size: 1.25em;
+      color: #8EC975;
+      font-weight: normal; }
 
 header.navigation {
   background-color: #2C4F77;
