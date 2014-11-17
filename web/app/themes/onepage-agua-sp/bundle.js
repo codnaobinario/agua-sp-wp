@@ -151,7 +151,26 @@ jQuery(".post-like a").click(function(){
   });
 
   return false;
+});
+
+jQuery(".saiba-mais-solucoes").on('click', function (evt) {
+  evt.preventDefault();
+  var el = jQuery(this);
+  var post_id = el.data('post_id');
+  var box_saiba_mais = el.parent().parent().parent().parent().nextAll('.content-saiba-mais:first');
+  // console.log(el.parent().parent().parent().next('.content-saiba-mais'));
+// console.log(el.parent().parent().parent());
+// console.log(box_saiba_mais);
+  box_saiba_mais.html('<div class="container">'+jQuery('#solucao-'+post_id).html()+'</div>');
+  box_saiba_mais.slideToggle();
+
+
 })
+
+
+
+
+
 },{"./vendor/jquery-modal/jquery.modal.min":2,"./vendor/slick/slick.min":3,"jquery":4}],2:[function(require,module,exports){
 /*
     A simple jQuery modal (http://github.com/kylefox/jquery-modal)

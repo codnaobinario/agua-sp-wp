@@ -7,91 +7,76 @@
     margin: 1em 2em;
   }
 
+  .solucao {
+    width: 48%;
+    float: left;
+    margin: 1%;
+    background-color: #2C5078;
+    border-radius: 20px;
+    margin-bottom: 1em;
+    padding: 1em;
+    color: #fff;
 
-
-    @include outer-container;
-
-    .solucao {
+    .thumb-image,
+    .content {
       @include span-columns(6);
       @include omega(2n);
-
-      background-color: #2C5078;
-      border-radius: 20px;
-      margin-bottom: 1em;
-      padding: 1em;
-      color: #fff;
-
-      .thumb-image,
-      .content {
-        @include span-columns(6);
-        @include omega(2n);
-      }
-      h6 {
-        font-family: 'the_serif_bold-regular';
-        font-size: em(20px);
-        color: #8EC975;
-        font-weight: normal;
-      }
-
     }
-    // article { @include span-columns(9); }
-
-    .post-like{
-      margin-top:1em
+    h6 {
+      font-family: 'the_serif_bold-regular';
+      font-size: em(20px);
+      color: #8EC975;
+      font-weight: normal;
     }
 
-    .like{
-      background:url(images/icons.png) no-repeat;
-      width: 15px;
-      height: 16px;
+  }
+  // article { @include span-columns(9); }
+
+  .post-like{
+    margin-top:1em
+  }
+
+  .like{
+    background:url(images/icons.png) no-repeat;
+    width: 15px;
+    height: 16px;
+    display: block;
+    float:left;
+    margin-right: 4px;
+    -moz-transition: all 0.2s ease-out 0.1s;
+    -webkit-transition: all 0.2s ease-out 0.1s;
+    -o-transition: all 0.2s ease-out 0.1s
+  }
+
+  .post-like a:hover .like{
+    background-position:-16px 0;
+  }
+
+  .voted .like, article footer .post-like.alreadyvoted{
+    background-position:-32px 0;
+  }
+
+
+  .hide,
+  .extra {
+    display: none;
+  }
+
+  .content-saiba-mais {
+    float:left;
+    clear: both;
+    height: 350px;
+    width: 100%;
+    background-color: #eee;
+    padding: 1em;
+
+    .extra {
       display: block;
-      float:left;
-      margin-right: 4px;
-      -moz-transition: all 0.2s ease-out 0.1s;
-      -webkit-transition: all 0.2s ease-out 0.1s;
-      -o-transition: all 0.2s ease-out 0.1s
     }
-
-    .post-like a:hover .like{
-      background-position:-16px 0;
+    .thumb-image,
+    .content {
+      @include span-columns(6);
+      @include omega(2n);
     }
-
-    .voted .like, article footer .post-like.alreadyvoted{
-      background-position:-32px 0;
-    }
-
-  // ul {
-  //   padding: 1em 2em 0;
-  //   li {
-  //     border-bottom: 1px solid #2C4F77;
-  //     margin-bottom: .1em;
-  //     padding-bottom: .1em;
-  //     img,.content {
-  //       vertical-align: top;
-  //       display: inline-block;
-  //     }
-  //     img {
-  //       width: 20%;
-  //       padding-right: 1em;
-  //     }
-  //     h6 {
-  //       margin-bottom: .5em;
-  //       font-size: 1.3em;
-  //     }
-  //     .content {
-  //       width: 76%;
-  //     }
-  //     p {
-  //       font-size: .85em;
-  //       line-height: 1em;
-  //       margin:.2em;
-  //       span {
-  //         font-weight: bold;
-  //       }
-  //     }
-  //     .description {
-  //       margin-bottom: 1em;
-  //     }
-  //   }
-  // }
+  }
 }

@@ -723,34 +723,20 @@ input[type="submit"] {
   .slide {
     height: auto; } }
 #solucoes {
-  background-color: #fff;
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
+  background-color: #fff; }
   #solucoes h5 {
     font-size: 1em;
     text-align: center;
     margin: 1em 2em; }
-  #solucoes:after {
-    content: "";
-    display: table;
-    clear: both; }
   #solucoes .solucao {
+    width: 48%;
     float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
+    margin: 1%;
     background-color: #2C5078;
     border-radius: 20px;
     margin-bottom: 1em;
     padding: 1em;
     color: #fff; }
-    #solucoes .solucao:last-child {
-      margin-right: 0; }
-    #solucoes .solucao:nth-child(2n) {
-      margin-right: 0; }
-    #solucoes .solucao:nth-child(2n+1) {
-      clear: left; }
     #solucoes .solucao .thumb-image,
     #solucoes .solucao .content {
       float: left;
@@ -787,6 +773,33 @@ input[type="submit"] {
     background-position: -16px 0; }
   #solucoes .voted .like, #solucoes article footer .post-like.alreadyvoted {
     background-position: -32px 0; }
+  #solucoes .hide,
+  #solucoes .extra {
+    display: none; }
+  #solucoes .content-saiba-mais {
+    float: left;
+    clear: both;
+    height: 350px;
+    width: 100%;
+    background-color: #eee;
+    padding: 1em; }
+    #solucoes .content-saiba-mais .extra {
+      display: block; }
+    #solucoes .content-saiba-mais .thumb-image,
+    #solucoes .content-saiba-mais .content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      #solucoes .content-saiba-mais .thumb-image:last-child,
+      #solucoes .content-saiba-mais .content:last-child {
+        margin-right: 0; }
+      #solucoes .content-saiba-mais .thumb-image:nth-child(2n),
+      #solucoes .content-saiba-mais .content:nth-child(2n) {
+        margin-right: 0; }
+      #solucoes .content-saiba-mais .thumb-image:nth-child(2n+1),
+      #solucoes .content-saiba-mais .content:nth-child(2n+1) {
+        clear: left; }
 
 header.navigation {
   background-color: #2C4F77;
