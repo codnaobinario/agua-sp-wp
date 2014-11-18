@@ -269,12 +269,16 @@ input[type="submit"] {
       display: table;
       clear: both; }
     #parceiros .logos .logo {
+      background-color: #fff;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      height: 150px;
+      line-height: 170px;
+      margin-bottom: 1em;
+      text-align: center;
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 31.76157%;
-      margin-bottom: 1em;
-      text-align: center; }
+      width: 31.76157%; }
       #parceiros .logos .logo:last-child {
         margin-right: 0; }
       @media screen and (min-width: 40em) {
@@ -301,8 +305,10 @@ input[type="submit"] {
         #parceiros .logos .logo:nth-child(6n+1) {
           clear: left; } }
 
-#quem-somos .slogan {
-  padding: 0 1em; }
+#quem-somos {
+  background-color: #F2F3F3; }
+  #quem-somos .slogan {
+    padding: 0 1em; }
 
 #cadastre-se {
   padding: 3em 0; }

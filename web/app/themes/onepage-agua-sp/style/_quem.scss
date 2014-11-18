@@ -4,9 +4,14 @@
     @include outer-container;
 
     .logo {
-      @include span-columns(4);
+      background-color: #fff;
+      box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+      height: 150px;
+      line-height: 170px;
       margin-bottom: 1em;
       text-align: center;
+
+      @include span-columns(4);
       @include media($medium-screen) {
         @include span-columns(2);
       }
@@ -36,6 +41,7 @@
 }
 
 #quem-somos {
+  background-color: #F2F3F3;
   .slogan {
     padding: 0 1em;
   }

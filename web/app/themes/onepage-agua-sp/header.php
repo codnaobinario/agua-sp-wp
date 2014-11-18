@@ -132,7 +132,7 @@
           <li class="nav-link"><a href="#agenda">agenda mínima</a></li>
           <li class="nav-link"><a href="#solucoes">soluções</a></li>
           <li class="nav-link"><a href="#quem-somos">quem somos</a></li>
-          <li class="nav-link"><a href="#compartilhe">compartilhe</a></li>
+          <!-- <li class="nav-link"><a href="#compartilhe">compartilhe</a></li> -->
           <li class="nav-link"><a href="#contato">contato</a></li>
         </ul>
       </div>
