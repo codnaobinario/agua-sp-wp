@@ -142,9 +142,18 @@ function solucao_ajax_upload(){
         die ( 'Busted!');
 
     //insert POST data
+    $my_post = array(
+      'post_title'    => 'My post',
+      'post_content'  => 'This is my post.',
+      'post_status'   => 'pending',
+      'post_type'     => 'solucao',
+      'post_author'   => 1,
+      'post_category' => array(8,39)
+    );
 
+    $post_id = wp_insert_post( $post, $wp_error );
 
-    $post_id = $_POST['post_id'];
+    add_post_meta($post_id, $meta_key, $meta_value, $unique);
 
 //require the needed files
     require_once(ABSPATH . "wp-admin" . '/includes/image.php');
@@ -165,3 +174,58 @@ function solucao_ajax_upload(){
   echo "uploaded the new Thumbnail";
   die();
 }
+
+
+
+
+
+
+
+
+
+
+
+// Register Custom Post Type
+function solucoes_post_type() {
+
+    $labels = array(
+        'name'                => _x( 'Soluções', 'Post Type General Name', 'solucoes' ),
+        'singular_name'       => _x( 'Solução', 'Post Type Singular Name', 'solucoes' ),
+        'menu_name'           => __( 'Soluções', 'solucoes' ),
+        'parent_item_colon'   => __( 'Parent Item:', 'solucoes' ),
+        'all_items'           => __( 'Todas soluções', 'solucoes' ),
+        'view_item'           => __( 'Ver solução', 'solucoes' ),
+        'add_new_item'        => __( 'Adicionar solução', 'solucoes' ),
+        'add_new'             => __( 'Adicionar nova', 'solucoes' ),
+        'edit_item'           => __( 'Editar solução', 'solucoes' ),
+        'update_item'         => __( 'Atualizar solução', 'solucoes' ),
+        'search_items'        => __( 'Procurar solução', 'solucoes' ),
+        'not_found'           => __( 'Não encontrada', 'solucoes' ),
+        'not_found_in_trash'  => __( 'Não encontrada na lixeira', 'solucoes' ),
+    );
+    $args = array(
+        'label'               => __( 'solucao', 'solucoes' ),
+        'description'         => __( 'Soluções engloba iniciativas, propostas e ideias para ajudar a enfrentar a crise atual', 'solucoes' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'thumbnail', 'comments', 'custom-fields', ),
+        'taxonomies'          => array( 'category', 'post_tag' ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'menu_icon'           => 'dashicons-lightbulb',
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+    );
+    register_post_type( 'solucao', $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'solucoes_post_type', 0 );
