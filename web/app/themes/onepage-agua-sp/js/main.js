@@ -160,9 +160,14 @@ jQuery(".saiba-mais-solucoes").on('click', function (evt) {
   var post_id = el.data('post_id');
   var box_saiba_mais = el.parent().parent().parent().parent().nextAll('.content-saiba-mais:first');
 
-  box_saiba_mais.html('<div class="container">'+jQuery('#solucao-'+post_id).html()+'</div>');
+  box_saiba_mais.html('<div class="container">'+jQuery('#solucao-'+post_id+' .extra').html()+'</div>');
   box_saiba_mais.slideToggle();
 });
+
+
+
+
+
 
 jQuery(".carregar-formulario").on('click', function (evt) {
   evt.preventDefault();

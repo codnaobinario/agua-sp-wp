@@ -75,11 +75,13 @@
     </div>
 
     <?php
+
+
       // meta_key=votes_count&orderby=meta_value_num&order=DESC&
-      $solucoes = query_posts('category=Soluções');
+      $solucoes = get_posts('post_type=solucao&posts_per_page=0');
       $i = 1;
 
-      foreach($solucoes as $solucao):
+      foreach($solucoes as $solucao): setup_postdata( $post );
     ?>
       <div class="solucao">
         <div class="info" id="solucao-<?php echo $solucao->ID; ?>">
@@ -88,10 +90,19 @@
           </div>
           <div class="content">
             <h6><?php echo $solucao->post_title;?></h6>
-            <a href="#" class="saiba-mais-solucoes" data-post_id="<?php echo $solucao->ID; ?>">Saiba mais</a>
+            <div class="excerpt"><?php the_excerpt(); ?></div>
+            <a href="#" class="saiba-mais-solucoes button" data-post_id="<?php echo $solucao->ID; ?>">Saiba mais</a>
             <?php echo getPostLikeLink($solucao->ID);?>
             <div class="extra">
-              <?php echo $solucao->post_content;?>
+              <div class="thumb-image"><?php echo simple_thumb($solucao->ID);?></div>
+              <div class="inner-content">
+                <h6><?php echo $solucao->post_title;?></h6>
+                <p><?php echo $solucao->post_content;?></p>
+                <p><strong>Categoria: </strong><span><?php the_terms($solucao->ID, 'categorias_solucao', '', ', ' ); ?></span></p>
+                <p><strong>Instiuição: </strong><span><?php echo get_post_meta( $solucao->ID, 'instituicao', true ); ?></span></p>
+                <?php $url = get_post_meta( $solucao->ID, 'url', true ); ?>
+                <p><strong>URL: </strong><a href="<?php echo $url; ?>"><?php echo $url; ?></a></p>
+              </div>
             </div>
           </div>
         </div>
@@ -102,7 +113,7 @@
         <div class="content-saiba-mais hide"></div>
         <div class="container">
       <?php endif; $i++; ?>
-    <?php endforeach; ?>
+    <?php endforeach; wp_reset_postdata(); ?>
     </div>
     <?php if ($i % 2): ?>
     <div class="content-saiba-mais hide"></div>

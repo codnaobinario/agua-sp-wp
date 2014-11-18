@@ -66,16 +66,20 @@
       font-weight: normal;
     }
 
+    p {
+      font-size: em(14px);
+    }
+
   }
 
   .post-like{
-    margin-top:1em
+    display: inline-block;
   }
 
   .like{
-    background:url(images/icons.png) no-repeat;
-    width: 15px;
-    height: 16px;
+    // background:url(images/icons.png) no-repeat;
+    // width: 15px;
+    // height: 16px;
     display: block;
     float:left;
     margin-right: 4px;
@@ -101,18 +105,40 @@
   .content-saiba-mais {
     float:left;
     clear: both;
-    min-height: 350px;
+    min-height: 250px;
     width: 100%;
-    background-color: #eee;
+    background-color: #2C5078;
+    color: #fff;
     padding: 1em;
+
+    fieldset {
+      background: none;
+      border: 0;
+    }
+
+    a {
+      color: #8EC975;
+      text-decoration: underline;
+    }
+
+    h6 {
+      font-size: em(24px);
+      margin-bottom: 1em;
+    }
+
+    p {
+      font-size: em(14px);
+    }
 
     .extra {
       display: block;
     }
-    .thumb-image,
-    .content {
-      @include span-columns(6);
-      @include omega(2n);
+
+    .thumb-image {
+      @include span-columns(3);
+    }
+    .inner-content {
+      @include span-columns(9);
     }
   }
 }

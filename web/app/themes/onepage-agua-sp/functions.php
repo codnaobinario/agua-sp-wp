@@ -2,6 +2,11 @@
 
 show_admin_bar(false);
 
+function custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 function themeslug_enqueue_script() {
     // wp_enqueue_script( 'jquery' );
     // wp_enqueue_script( 'jquery-form',array('jquery'),false,true );
@@ -116,14 +121,14 @@ function getPostLikeLink($post_id)
 
     $vote_count = get_post_meta($post_id, "votes_count", true);
 
-    $output = '<p class="post-like">';
+    $output = '<div class="post-like button">';
     if(hasAlreadyVoted($post_id))
         $output .= ' <span title="'.__('Eu apoio essa solução.', $themename).'" class="like alreadyvoted"><3</span>';
     else
         $output .= '<a href="#" data-post_id="'.$post_id.'">
                     <span  title="'.__('Eu apoio essa solução.', $themename).'"class="qtip like"><3</span>
                 </a>';
-    $output .= '<span class="count">'.$vote_count.'</span></p>';
+    $output .= '<span class="count">'.$vote_count.'</span></div>';
 
     return $output;
 }

@@ -793,12 +793,11 @@ input[type="submit"] {
       font-size: 1.25em;
       color: #8EC975;
       font-weight: normal; }
+    #solucoes .solucao p {
+      font-size: 0.875em; }
   #solucoes .post-like {
-    margin-top: 1em; }
+    display: inline-block; }
   #solucoes .like {
-    background: url(images/icons.png) no-repeat;
-    width: 15px;
-    height: 16px;
     display: block;
     float: left;
     margin-right: 4px;
@@ -815,27 +814,38 @@ input[type="submit"] {
   #solucoes .content-saiba-mais {
     float: left;
     clear: both;
-    min-height: 350px;
+    min-height: 250px;
     width: 100%;
-    background-color: #eee;
+    background-color: #2C5078;
+    color: #fff;
     padding: 1em; }
+    #solucoes .content-saiba-mais fieldset {
+      background: none;
+      border: 0; }
+    #solucoes .content-saiba-mais a {
+      color: #8EC975;
+      text-decoration: underline; }
+    #solucoes .content-saiba-mais h6 {
+      font-size: 1.5em;
+      margin-bottom: 1em; }
+    #solucoes .content-saiba-mais p {
+      font-size: 0.875em; }
     #solucoes .content-saiba-mais .extra {
       display: block; }
-    #solucoes .content-saiba-mais .thumb-image,
-    #solucoes .content-saiba-mais .content {
+    #solucoes .content-saiba-mais .thumb-image {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 48.82117%; }
-      #solucoes .content-saiba-mais .thumb-image:last-child,
-      #solucoes .content-saiba-mais .content:last-child {
+      width: 23.23176%; }
+      #solucoes .content-saiba-mais .thumb-image:last-child {
         margin-right: 0; }
-      #solucoes .content-saiba-mais .thumb-image:nth-child(2n),
-      #solucoes .content-saiba-mais .content:nth-child(2n) {
+    #solucoes .content-saiba-mais .inner-content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%; }
+      #solucoes .content-saiba-mais .inner-content:last-child {
         margin-right: 0; }
-      #solucoes .content-saiba-mais .thumb-image:nth-child(2n+1),
-      #solucoes .content-saiba-mais .content:nth-child(2n+1) {
-        clear: left; }
 
 header.navigation {
   background-color: #2C4F77;
