@@ -815,7 +815,7 @@ input[type="submit"] {
   #solucoes .content-saiba-mais {
     float: left;
     clear: both;
-    height: 350px;
+    min-height: 350px;
     width: 100%;
     background-color: #eee;
     padding: 1em; }

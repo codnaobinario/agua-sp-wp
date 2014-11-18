@@ -168,7 +168,6 @@ jQuery(".carregar-formulario").on('click', function (evt) {
   evt.preventDefault();
 
   var el = jQuery(this);
-  console.log(el.parent().parent().parent());
   var box_saiba_mais = el.parent().parent().parent().nextAll('.content-saiba-mais:first');
 
   box_saiba_mais.html('<div class="container">'+jQuery('#form-cadastro').html()+'</div>');
@@ -184,6 +183,13 @@ jQuery(".carregar-formulario").on('click', function (evt) {
     // bind form using 'ajaxForm'
     jQuery('.content-saiba-mais .thumbnail_upload').ajaxForm(options);
 
+    jQuery('.content-saiba-mais input[name="type"]').on('change', function (evt) {
+      if (evt.currentTarget.value == '1') {
+        jQuery('.mostrar-solucao').hide();
+      } else if (evt.currentTarget.value == '2') {
+        jQuery('.mostrar-solucao').show();
+      }
+    })
 
 });
 

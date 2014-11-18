@@ -17,11 +17,58 @@
       </div>
       <div id="form-cadastro" class="hide">
         <form class="thumbnail_upload" method="post" action="#" enctype="multipart/form-data" >
-          <input type="file" name="thumbnail" id="thumbnail">
+        <fieldset>
+          <legend>Participe da aliança</legend>
+
+          <div class="input radio">
+            <label for="">Qual o tipo de solução é a sua?</label>
+            <input type="radio" name="type" value="2" checked="checked"> Iniciativa
+            <input type="radio" name="type" value="1"> Proposta
+          </div>
+
+          <div class="input text">
+            <label for="title">Nome</label>
+            <input type="text" name="title">
+          </div>
+
+          <div class="input text">
+            <label for="content">Descrição</label>
+            <textarea name="content"></textarea>
+          </div>
+
+          <div class="input select mostrar-solucao">
+            <label for="categoria_solucao">Categoria</label>
+            <select name="categoria_solucao" id="categoria_solucao">
+              <option value="">Escolha...</option>
+              <?php
+                $terms = get_terms(array('categorias_solucao'), array('hide_empty'=>false));
+                foreach ( $terms as $term ) {
+                echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
+                }
+              ?>
+            </select>
+          </div>
+
+          <div class="input text mostrar-solucao">
+            <label for="instituicao">Instituição</label>
+            <input type="text" name="instituicao">
+          </div>
+
+          <div class="input text mostrar-solucao">
+            <label for="url">URL</label>
+            <input type="text" name="url">
+          </div>
+
+          <div class="input file mostrar-solucao">
+            <label for="thumbnail">Imagem representativa</label>
+            <input type="file" name="thumbnail" id="thumbnail">
+          </div>
+
           <input type='hidden' value='<?php echo wp_create_nonce( 'upload_thumb' ); ?>' name='nonce' />
-          <input type="hidden" name="post_id" id="post_id" value="POSTID">
           <input type="hidden" name="action" id="action" value="solucao_upload_action">
-          <input id="submit-ajax" name="submit-ajax" type="submit" value="upload">
+
+          <input id="submit-ajax" name="submit-ajax" type="submit" value="Enviar Solução">
+        </fieldset>
         <form>
         <div class="output1"></div>
       </div>

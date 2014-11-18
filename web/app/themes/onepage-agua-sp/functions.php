@@ -126,9 +126,6 @@ function getPostLikeLink($post_id)
     return $output;
 }
 
-
-
-
 //hook the Ajax call
 //for logged-in users
 add_action('wp_ajax_solucao_upload_action', 'solucao_ajax_upload');
@@ -143,46 +140,45 @@ function solucao_ajax_upload(){
 
     //insert POST data
     $my_post = array(
-      'post_title'    => 'My post',
-      'post_content'  => 'This is my post.',
+      'post_title'    => $_POST['title'],
+      'post_content'  => $_POST['content'],
       'post_status'   => 'pending',
       'post_type'     => 'solucao',
-      'post_category' => array(8,39)
+      'post_category' => array($_POST['type'])
     );
 
-    $post_id = wp_insert_post( $post, $wp_error );
-
-    add_post_meta($post_id, $meta_key, $meta_value, $unique);
-
-//require the needed files
-    require_once(ABSPATH . "wp-admin" . '/includes/image.php');
-    require_once(ABSPATH . "wp-admin" . '/includes/file.php');
-    require_once(ABSPATH . "wp-admin" . '/includes/media.php');
-//then loop over the files that were sent and store them using  media_handle_upload();
-    if ($_FILES) {
-        foreach ($_FILES as $file => $array) {
-            if ($_FILES[$file]['error'] !== UPLOAD_ERR_OK) {
-                echo "upload error : " . $_FILES[$file]['error'];
-                die();
-            }
-            $attach_id = media_handle_upload( $file, $post_id );
-        }
+    if ($_POST['type'] == 2) {
+        $my_post['tax_input'] = array('categorias_solucao'=>$_POST['categoria_solucao']);
     }
-//and if you want to set that image as Post  then use:
-  update_post_meta($post_id,'_thumbnail_id',$attach_id);
-  echo "uploaded the new Thumbnail";
-  die();
+
+    $post_id = wp_insert_post( $my_post );
+
+    if ($_POST['type'] == 2) {
+        add_post_meta($post_id, 'instituicao', $_POST['instituicao']);
+        add_post_meta($post_id, 'url', $_POST['url']);
+
+        //require the needed files
+        require_once(ABSPATH . "wp-admin" . '/includes/image.php');
+        require_once(ABSPATH . "wp-admin" . '/includes/file.php');
+        require_once(ABSPATH . "wp-admin" . '/includes/media.php');
+
+        //then loop over the files that were sent and store them using  media_handle_upload();
+        if ($_FILES) {
+            foreach ($_FILES as $file => $array) {
+                if ($_FILES[$file]['error'] !== UPLOAD_ERR_OK) {
+                    echo "upload error : " . $_FILES[$file]['error'];
+                    die();
+                }
+                $attach_id = media_handle_upload( $file, $post_id );
+            }
+        }
+        //and if you want to set that image as Post  then use:
+        update_post_meta($post_id,'_thumbnail_id',$attach_id);
+    }
+
+    echo "Solução adicionada com sucesso. Aguardando aprovação pelo administrador do site.";
+    die();
 }
-
-
-
-
-
-
-
-
-
-
 
 // Register Custom Post Type
 function solucoes_post_type() {
@@ -207,7 +203,7 @@ function solucoes_post_type() {
         'description'         => __( 'Soluções engloba iniciativas, propostas e ideias para ajudar a enfrentar a crise atual', 'solucoes' ),
         'labels'              => $labels,
         'supports'            => array( 'title', 'editor', 'thumbnail', 'comments', 'custom-fields', ),
-        'taxonomies'          => array( 'category', 'post_tag' ),
+        'taxonomies'          => array('category'),
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
