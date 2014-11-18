@@ -147,7 +147,6 @@ function solucao_ajax_upload(){
       'post_content'  => 'This is my post.',
       'post_status'   => 'pending',
       'post_type'     => 'solucao',
-      'post_author'   => 1,
       'post_category' => array(8,39)
     );
 
@@ -207,7 +206,7 @@ function solucoes_post_type() {
         'label'               => __( 'solucao', 'solucoes' ),
         'description'         => __( 'Soluções engloba iniciativas, propostas e ideias para ajudar a enfrentar a crise atual', 'solucoes' ),
         'labels'              => $labels,
-        'supports'            => array( 'title', 'thumbnail', 'comments', 'custom-fields', ),
+        'supports'            => array( 'title', 'editor', 'thumbnail', 'comments', 'custom-fields', ),
         'taxonomies'          => array( 'category', 'post_tag' ),
         'hierarchical'        => false,
         'public'              => true,
@@ -229,3 +228,40 @@ function solucoes_post_type() {
 
 // Hook into the 'init' action
 add_action( 'init', 'solucoes_post_type', 0 );
+
+
+// Register Custom Taxonomy
+function categorias_solucao() {
+
+    $labels = array(
+        'name'                       => _x( 'Categorias', 'Taxonomy General Name', 'categorias_solucao' ),
+        'singular_name'              => _x( 'Categoria', 'Taxonomy Singular Name', 'categorias_solucao' ),
+        'menu_name'                  => __( 'Categoria de soluções', 'categorias_solucao' ),
+        'all_items'                  => __( 'Todas categorias', 'categorias_solucao' ),
+        'parent_item'                => __( 'Parent Item', 'categorias_solucao' ),
+        'parent_item_colon'          => __( 'Parent Item:', 'categorias_solucao' ),
+        'new_item_name'              => __( 'Nome nova categoria', 'categorias_solucao' ),
+        'add_new_item'               => __( 'Adicionar categoria', 'categorias_solucao' ),
+        'edit_item'                  => __( 'Editar categoria', 'categorias_solucao' ),
+        'update_item'                => __( 'Atualizar categoria', 'categorias_solucao' ),
+        'separate_items_with_commas' => __( 'Categorias separadas por vírgula', 'categorias_solucao' ),
+        'search_items'               => __( 'Buscar categorias', 'categorias_solucao' ),
+        'add_or_remove_items'        => __( 'Adicionar ou remover categorias', 'categorias_solucao' ),
+        'choose_from_most_used'      => __( 'Escolha entre as mais usadas', 'categorias_solucao' ),
+        'not_found'                  => __( 'Não encontrado', 'categorias_solucao' ),
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+    );
+    register_taxonomy( 'categorias_solucao', array( 'solucao' ), $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'categorias_solucao', 0 );
