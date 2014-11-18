@@ -14,10 +14,10 @@
     <div class="container stream-share">
       <h5>Compartilhe</h5>
       <a class="fb-share" href="#">
-        <img src="<?php echo get_template_directory_uri();?>/images/fb-video.svg" alt="Share on Facebook">
+        <img src="<?php echo get_template_directory_uri();?>/images/icon-facebook.svg" alt="Share on Facebook">
       </a>
       <a class="twitter-share" href="https://twitter.com/share?text=Campanha Água@SP mapeia atores e propostas para o enfrentamento da crise em São Paulo: #AguaSP" target="_blank">
-        <img src="<?php echo get_template_directory_uri();?>/images/tw-video.svg" alt="Share on Twitter">
+        <img src="<?php echo get_template_directory_uri();?>/images/icon-twitter.svg" alt="Share on Twitter">
       </a>
     </div>
   </section>

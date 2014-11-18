@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+@import "bourbon/bourbon";
+@import "base/base";
+@import "neat/neat";
+
+@import "fonts";
+@import "button";
+@import "quem";
+@import "cadastro";
+@import "agenda";
+
+$slick-font-path: "js/vendor/slick/fonts/";
+$slick-font-family: "slick";
+$slick-loader-path: "js/vendor/slick/";
+
+@import "../js/vendor/slick/slick";
+
+@import "a-crise";
+@import "solucoes";
+
+@import "navigation";
+@import "hero";
+@import "bullets";
+@import "griditems";
+@import "footer";
+
+@import "layout";
+
+
+@import "../js/vendor/jquery-modal/jquery.modal";
+@import "modal-industria-seca";
+
+textarea,
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
+select[multiple=multiple], button, input[type="submit"] {
+  border-radius: 0;
+}
+.countdown {
+  margin: 1em auto;
+  width: 460px;
+}
+
+section {
+  color: #2C4F77;
+  padding: 3em 0;
+
+  h2,
+  h3 {
+    text-transform: lowercase;
+    font-size: 1.25em;
+    line-height: 1.0;
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  h2:before {
+    content: url('images/heading-positive.png');
+    display: block;
+  }
+}
+
+.tinted {
+  background: #87DB75;
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  header.navigation .navigation-tools {
+    display:none;
+  }
+
+  .hero .hero-logo {
+    width: 90%;
+  }
+}

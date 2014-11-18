@@ -2,22 +2,28 @@
   <div class="container">
     <h2>A crise</h2>
     <div class="slider single-item">
+
+    <div class="texto-destaque first-slide">
+      <img src="<?php echo get_template_directory_uri();?>/images/icon-estado-sp-agua.svg" alt="">
+      <h3>As principais fontes de São Paulo <span>estão secando</span></h3>
+    </div>
+    <div>
+      <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide3.png" alt="">
+    </div>
+    <div>
+      <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide8.png" alt="">
+    </div>
+    <div>
+      <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide9.png" alt="">
+    </div>
     <div class="texto-destaque">
-      <h3>As principais fontes de São Paulo estão secando</h3>
+      <h3>
+        Sem chuva, a situação se agrava.
+        <br/>
+        Estamos no volume morto
+      </h3>
     </div>
-    <div>
-      <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide3.PNG" alt="">
-    </div>
-    <div>
-      <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide8.PNG" alt="">
-    </div>
-    <div>
-      <img src="<?php echo get_template_directory_uri();?>/images/slides/Slide9.PNG" alt="">
-    </div>
-    <div class="texto-destaque">
-      <h3>Sem chuva, a situação se agrava. Estamos no volume morto</h3>
-    </div>
-    <div><img src="<?php echo get_template_directory_uri();?>/images/slides/Slide6.PNG" alt=""></div>
+    <div><img src="<?php echo get_template_directory_uri();?>/images/slides/Slide6.png" alt=""></div>
     <div class="texto-destaque">
       <h3>Os manancias continuam a ser degradados</h3>
     </div>
@@ -33,7 +39,7 @@
     <div class="texto-destaque">
       <h3>A falta de água em São Paulo foi causada por muitos fatores:</h3>
     </div>
-    <div><img src="<?php echo get_template_directory_uri();?>/images/slides/Slide2.PNG" alt=""></div>
+    <div><img src="<?php echo get_template_directory_uri();?>/images/slides/Slide2.png" alt=""></div>
     <div class="texto-destaque">
       <h3>Gestão baseada em fontes inesgotáveis<br/>
         Degradação dos Mananciais <br/>
@@ -68,15 +74,10 @@
     </div>
   </div>
   <div class="report-download">
-    <div class="report-box">
-      <img class="box" src="<?php echo get_template_directory_uri();?>/images/report-box-azul.svg">
-      <div class="report-link">
-        <a href="<?php echo get_template_directory_uri();?>/files/Agua_SP_PropCurto_29Out.pdf">
-          <img src="<?php echo get_template_directory_uri();?>/images/report-icon-azul.svg">
-          <h5>Apresentação dos resultados</h5>
-        </a>
-      </div>
-    </div>
+    <a href="<?php echo get_template_directory_uri();?>/files/Agua_SP_PropCurto_29Out.pdf" class="report-box">
+      <img src="<?php echo get_template_directory_uri();?>/images/report-icon.svg">
+      <span>Apresentação dos resultados</span>
+    </a>
   </div>
   </div>
 </section>

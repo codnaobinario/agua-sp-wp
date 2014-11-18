@@ -1,0 +1,132 @@
+#a-crise {
+  background-color: #2C4F77;
+  color: #F0F0F0;
+
+  h2:before {
+    content: url('images/heading-negative.png');
+  }
+
+  // .report-download {
+  //   .report-box {
+  //     .report-link {
+  //         color: #2C4F77;
+  //     }
+  //   }
+  // }
+  .slider {
+
+    border: 3px dotted #8EC975;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+
+    > div {
+      // background-color: #F0F0F0;
+      height: 457px;
+      // border: 0px solid #2C4F77;
+    }
+
+    > img {
+      width: 100%;
+    }
+
+    .texto-destaque {
+      background: #2c5078; /* Old browsers */
+      background: -moz-linear-gradient(top,  #2c5078 54%, #2c5078 54%, #204667 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(54%,#2c5078), color-stop(54%,#2c5078), color-stop(100%,#204667)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  #2c5078 54%,#2c5078 54%,#204667 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  #2c5078 54%,#2c5078 54%,#204667 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  #2c5078 54%,#2c5078 54%,#204667 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  #2c5078 54%,#2c5078 54%,#204667 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c5078', endColorstr='#204667',GradientType=0 ); /* IE6-9 */
+      border-radius: 1em;
+      min-height: 457px;
+
+      img {
+        margin: 0 auto;
+      }
+
+      h3 {
+        text-align: center;
+        line-height: 1.3em;
+        font-size: em(42px);
+        font-family: 'the_serif_bold-regular';
+        line-height: em(42px);
+        span {
+          font-size: 1.5em;
+          display: block;
+        }
+      }
+    }
+
+    h4 {
+      margin: 2em 2.5em 1em;
+    }
+
+    ul.colunas {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      margin: 0 4em 0;
+    }
+  }
+
+  .slick-prev {
+    left: 25px;
+  }
+  .slick-next {
+    right: 25px;
+  }
+  .slick-prev, .slick-next {
+    height: 32px;
+    width: 32px;
+  }
+  .slick-prev:before, .slick-next:before {
+    font-size: 32px;
+    color: #F0F0F0;
+  }
+
+  .report-download {
+    margin-top: -85px;
+    z-index: 99999;
+    position: relative;
+  }
+  .report-box {
+    background-color: #8EC975;
+    width: 30em;
+    margin: 0 auto;
+    span {
+      padding-left: 0;
+    }
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #a-crise {
+    .slider ul.colunas {
+      columns: 1;
+      -webkit-columns: 1;
+      -moz-columns: 1;
+    }
+
+    .slider .texto-destaque h3,
+    .slider .texto-destaque .container section h2,
+    .container section #a-crise .slider .texto-destaque h2 {
+      line-height: 1.3em;
+    }
+    .report-download {
+      margin-top: .5em;
+    }
+
+    .report-box {
+      width: 21em;
+      line-height: 1.3em;
+      padding: 1em;
+    }
+  }
+
+  .slide {
+    height: auto;
+  }
+}

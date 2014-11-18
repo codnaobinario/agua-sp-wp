@@ -1,0 +1,95 @@
+.footer {
+  $footer-background: url('images/bg-footer.jpg') no-repeat scroll center top / cover;
+  $footer-color: white;
+  $footer-link-color: $footer-color;
+  $footer-disclaimer-color: $footer-color;
+
+  background: $footer-background;
+  padding: $base-spacing*2 $gutter;
+  width: 100%;
+
+  a {
+    color: $footer-color;
+    text-decoration: underline;
+  }
+
+  .container {
+    @include outer-container;
+    .col {
+      @include span-columns(6);
+    }
+  }
+
+  .footer-logo {
+    text-align: right;
+    margin-bottom: 4em;
+
+    img {
+      height: 5em;
+    }
+  }
+  .footer-disclaimer {
+    @include media($medium-screen) {
+      width: 330px;
+      text-align: right;
+      float: right;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  .footer-links {
+    @include clearfix;
+    margin-bottom: $base-spacing;
+  }
+
+  .social-icons li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  ul {
+    margin-bottom: $base-spacing*2;
+  }
+
+  li {
+    text-align: center;
+
+    @include media($medium-screen) {
+      text-align: left;
+    }
+  }
+
+  li a {
+    color: $footer-link-color;
+
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  p {
+    color: $footer-disclaimer-color;
+    font-size: .8em;
+    line-height: 1.0em;
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .footer {
+    ul {
+      text-align: center;
+    }
+    .container {
+      @include outer-container;
+      .col {
+        @include span-columns(12);
+      }
+    }
+  }
+}

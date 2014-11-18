@@ -28,12 +28,13 @@
   <meta property="fb:admins" content="">
 
   <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/style.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/js/vendor/jquery-modal/jquery.modal.css">
 
   <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri();?>/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
   <![endif]-->
   <script src="<?php echo get_template_directory_uri();?>/js/vendor/modernizr.js"></script>
+
+  <?php wp_head(); ?>
 </head>
 <body>
 
@@ -131,7 +132,7 @@
           <li class="nav-link"><a href="#agenda">agenda mínima</a></li>
           <li class="nav-link"><a href="#solucoes">soluções</a></li>
           <li class="nav-link"><a href="#quem-somos">quem somos</a></li>
-          <li class="nav-link"><a href="#compartilhe">compartilhe</a></li>
+          <!-- <li class="nav-link"><a href="#compartilhe">compartilhe</a></li> -->
           <li class="nav-link"><a href="#contato">contato</a></li>
         </ul>
       </div>

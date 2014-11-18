@@ -8,7 +8,7 @@ set :stage, :staging
 
 # Extended Server Syntax
 # ======================
-server 'example.com', user: 'deploy', roles: %w{web app db}
+server 'aguasp.nucleodigital.cc', port: 6666, user: 'hacker', roles: %w{web app db}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
@@ -19,6 +19,7 @@ server 'example.com', user: 'deploy', roles: %w{web app db}
 #    forward_agent: false,
 #    auth_methods: %w(password)
 #  }
-
+set :deploy_to, -> { "/home/hacker/aguasp/staging/#{fetch(:application)}" }
+set :branch, :staging
 fetch(:default_env).merge!(wp_env: :staging)
 

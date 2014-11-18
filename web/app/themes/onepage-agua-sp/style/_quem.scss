@@ -1,0 +1,48 @@
+#parceiros {
+  padding: 0 1em;
+  .logos {
+    @include outer-container;
+
+    .logo {
+      background-color: #fff;
+      box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+      height: 150px;
+      line-height: 170px;
+      margin-bottom: 1em;
+      text-align: center;
+
+      @include span-columns(4);
+      @include media($medium-screen) {
+        @include span-columns(2);
+      }
+
+      &:nth-child(3n) {
+        @include omega();
+        @include media($medium-screen) {
+          margin-right: 2.35765%;
+        }
+      }
+      &:nth-child(3n+1) {
+        clear: left;
+        @include media($medium-screen) {
+          clear: none;
+        }
+      }
+      @include media($medium-screen) {
+        &:nth-child(6n) {
+          @include omega();
+        }
+        &:nth-child(6n+1) {
+          clear: left;
+        }
+      }
+    }
+  }
+}
+
+#quem-somos {
+  background-color: #F2F3F3;
+  .slogan {
+    padding: 0 1em;
+  }
+}

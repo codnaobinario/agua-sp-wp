@@ -1,6 +1,11 @@
 /* globals jQuery, Modernizr */
+var $ = require('jquery');
+window.jQuery = $;
 
-(function ($) {
+var form = require('./vendor/form/jquery.form');
+var modal = require('./vendor/jquery-modal/jquery.modal.min');
+var slick = require('./vendor/slick/slick.min');
+
   'use strict';
 
   $(function () {
@@ -52,17 +57,6 @@
     salvarUsuario({name: name, email: email});
   });
 
-  // myDataRef.on('child_added', function(snapshot) {
-  //   var message = snapshot.val();
-  //   displayChatMessage(message.name, message.email);
-  // });
-
-  // function displayChatMessage(name, text) {
-  //   $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
-  //   $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-  // };
-})(jQuery);
-
   var myDataRef = new Firebase('https://popping-heat-3998.firebaseio.com/');
 
   function salvarUsuario (obj) {
@@ -104,7 +98,7 @@ function signinCallback(authResult) {
     // Autorizado com sucesso
     // Ocultar o botão de login agora que o usuário está autorizado, por exemplo:
     // console.log(authResult);
-    jQuery.getJSON('https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token='+authResult['access_token'])
+    $.getJSON('https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token='+authResult['access_token'])
       .done(function(data){
         // console.log(data);
         salvarUsuario({name: data.name, email: data.email, google: data});
@@ -131,5 +125,101 @@ function render() {
 
 $('.single-item').slick();
 
-$('#modal-industria-seca').modal({opacity: 0.5});
+// $('#modal-industria-seca').modal({opacity: 0.5});
+
+
+jQuery(".post-like.couldvote").on('click', function(evt) {
+  evt.preventDefault();
+  var heart = jQuery(this);
+
+  // Retrieve post ID from data attribute
+  var post_id = heart.data("post_id");
+
+  // Ajax call
+  jQuery.ajax({
+      type: "post",
+      url: ajax_var.url,
+      data: "action=post-like&nonce="+ajax_var.nonce+"&post_like=&post_id="+post_id,
+      success: function(count){
+          // If vote successful
+          if(count != "already")
+          {
+              heart.addClass("alreadyvoted voted");
+              heart.removeClass("couldvote");
+              heart.find(".count").text(count);
+          }
+      }
+  });
+});
+
+jQuery(".saiba-mais-solucoes").on('click', function (evt) {
+  evt.preventDefault();
+
+  var el = jQuery(this);
+  var post_id = el.data('post_id');
+  var box_saiba_mais = el.parent().parent().parent().parent().nextAll('.content-saiba-mais:first');
+
+  box_saiba_mais.html('<div class="container">'+jQuery('#solucao-'+post_id+' .extra').html()+'</div>');
+  box_saiba_mais.find('.close.slide').on('click', function(evt) {
+    evt.preventDefault();
+    // var el = jQuery(this);
+    // var box_saiba_mais = el.parent().parent().parent().nextAll('.content-saiba-mais:first');
+    box_saiba_mais.slideToggle();
+  });
+  box_saiba_mais.slideToggle();
+});
+
+
+
+
+
+
+jQuery(".carregar-formulario").on('click', function (evt) {
+  evt.preventDefault();
+
+  var el = jQuery(this);
+  var box_saiba_mais = el.parent().parent().parent().nextAll('.content-saiba-mais:first');
+
+  box_saiba_mais.addClass('formulario'); // para sempre ter altura definida e a animação ficar melhor
+
+  box_saiba_mais.html('<div class="container">'+jQuery('#form-cadastro').html()+'</div>');
+
+  box_saiba_mais.slideToggle();
+
+  var options = {
+      target:        '.content-saiba-mais .output1',      // target element(s) to be updated with server response
+      beforeSubmit:  showRequest,     // pre-submit callback
+      success:       showResponse,    // post-submit callback
+      url:    ajax_var.url                 // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+  };
+
+  // bind form using 'ajaxForm'
+  jQuery('.content-saiba-mais .thumbnail_upload').ajaxForm(options);
+
+  jQuery('.content-saiba-mais input[name="type"]').on('change', function (evt) {
+    if (evt.currentTarget.value == '1') {
+      jQuery('.mostrar-solucao').hide();
+    } else if (evt.currentTarget.value == '2') {
+      jQuery('.mostrar-solucao').show();
+    }
+  });
+  box_saiba_mais.find('.close').on('click', function(evt) {
+    evt.preventDefault();
+    // var el = jQuery(this);
+    // var box_saiba_mais = el.parent().parent().parent().nextAll('.content-saiba-mais:first');
+    box_saiba_mais.removeClass('formulario');
+    box_saiba_mais.slideToggle();
+  });
+});
+
+function showRequest(formData, jqForm, options) {
+//do extra stuff before submit like disable the submit button
+jQuery('.content-saiba-mais .thumbnail_upload').slideToggle();
+jQuery('.content-saiba-mais .output1').html('Sending...');
+jQuery('.content-saiba-mais .submit-ajax').attr("disabled", "disabled");
+}
+function showResponse(responseText, statusText, xhr, $form)  {
+//do extra stuff after submit
+}
+
 

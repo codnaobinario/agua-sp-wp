@@ -1,0 +1,106 @@
+.hero {
+  $hero-background-top: darken($base-accent-color, 25);
+  $hero-background-bottom: adjust-hue($hero-background-top, -70);
+  $hero-color: #FFF;
+  $gradient-angle: 10deg;
+  $hero-image: 'images/bg-header.jpg';
+
+  @include background(url($hero-image));
+
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding-bottom: 2em;
+
+  .hero-logo {
+    display: block;
+    margin: auto;
+    padding-top: 2em;
+    width: 50%;
+  }
+
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    margin: auto;
+    text-align: center;
+    color: $hero-color;
+
+    button {
+      @include button(simple, $base-background-color);
+      font-size: $base-font-size;
+      outline: none;
+    }
+
+    .hero-copy {
+      text-align: justify;
+      margin: 2em 0;
+
+      h1 {
+        font-size: 1.6em;
+        margin-bottom: .5em;
+        text-align: center;
+
+        @include media($large-screen) {
+          font-size: 1.8em;
+        }
+      }
+
+      h2,
+      p {
+        margin: auto;
+        margin-bottom: 1em;
+        font-weight: 200;
+
+        @include media($large-screen) {
+          max-width: 80%;
+        }
+      }
+
+      h2 {
+        text-align: center;
+        font-size: em(28px);
+      }
+    }
+  }
+
+  #live {
+    // background: #2C4F77;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+
+
+    h5 {
+      display:inline-block;
+      vertical-align: top;
+      margin: .4em;
+      color: #87DB75;
+      font-weight: 200;
+      font-size: 3em;
+      text-align: center;
+    }
+
+    .stream {
+      width: 1050px;
+      margin: auto;
+    }
+
+    a {
+      margin: 0 1em;
+      width: em(95px);
+      height: em(95px);
+      background-color: #8EC975;
+      display:inline-block;
+      box-shadow: 3px 3px 3px rgba(0,0,0,.4);
+
+      img {
+        background-color: #6EA74A;
+        width: em(75px);
+        height: em(75px);
+        padding: em(10px);
+        margin: em(10px);
+      }
+    }
+  }
+}
