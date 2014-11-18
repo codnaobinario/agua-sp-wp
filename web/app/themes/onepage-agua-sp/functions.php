@@ -16,6 +16,7 @@ add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_script' );
 add_theme_support('post-thumbnails');
 
 function simple_thumb($id) {
+
   $img = get_the_post_thumbnail($id, 'full');
   return preg_replace('/(height|width)="\d*"/', '', $img);
 }

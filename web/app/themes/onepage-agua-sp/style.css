@@ -728,13 +728,49 @@ input[type="submit"] {
     font-size: 1em;
     text-align: center;
     margin: 1em 2em; }
+  #solucoes .minha-solucao {
+    background-color: #8EC975;
+    border-radius: 20px;
+    width: 48%;
+    float: left;
+    margin: 1%;
+    padding: 1em;
+    color: #fff; }
+    #solucoes .minha-solucao .thumb-image,
+    #solucoes .minha-solucao .content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      #solucoes .minha-solucao .thumb-image:last-child,
+      #solucoes .minha-solucao .content:last-child {
+        margin-right: 0; }
+      #solucoes .minha-solucao .thumb-image:nth-child(2n),
+      #solucoes .minha-solucao .content:nth-child(2n) {
+        margin-right: 0; }
+      #solucoes .minha-solucao .thumb-image:nth-child(2n+1),
+      #solucoes .minha-solucao .content:nth-child(2n+1) {
+        clear: left; }
+    #solucoes .minha-solucao .thumb-image {
+      box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+      text-align: center; }
+      #solucoes .minha-solucao .thumb-image img {
+        margin: 3.2em 0; }
+    #solucoes .minha-solucao p {
+      color: #fff;
+      font-size: 0.875em; }
+    #solucoes .minha-solucao .button {
+      display: block;
+      text-align: center;
+      background-color: #6EA74A;
+      border-radius: 10px;
+      color: #2C5078; }
   #solucoes .solucao {
     width: 48%;
     float: left;
     margin: 1%;
     background-color: #2C5078;
     border-radius: 20px;
-    margin-bottom: 1em;
     padding: 1em;
     color: #fff; }
     #solucoes .solucao .thumb-image,

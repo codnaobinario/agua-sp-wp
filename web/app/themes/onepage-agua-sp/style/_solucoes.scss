@@ -7,13 +7,50 @@
     margin: 1em 2em;
   }
 
+  .minha-solucao {
+    background-color: #8EC975;
+    border-radius: 20px;
+
+    width: 48%;
+    float: left;
+    margin: 1%;
+    padding: 1em;
+    color: #fff;
+
+    .thumb-image,
+    .content {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    .thumb-image {
+      box-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
+      text-align: center;
+      img {
+        margin: 3.2em 0;
+      }
+    }
+
+    p {
+      color: #fff;
+      font-size: em(14px);
+    }
+
+    .button {
+      display: block;
+      text-align: center;
+      background-color: #6EA74A;
+      border-radius: 10px;
+      color: #2C5078;
+    }
+  }
+
   .solucao {
     width: 48%;
     float: left;
     margin: 1%;
     background-color: #2C5078;
     border-radius: 20px;
-    margin-bottom: 1em;
     padding: 1em;
     color: #fff;
 
@@ -30,7 +67,6 @@
     }
 
   }
-  // article { @include span-columns(9); }
 
   .post-like{
     margin-top:1em

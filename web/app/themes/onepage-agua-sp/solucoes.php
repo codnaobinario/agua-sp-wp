@@ -3,11 +3,24 @@
     <h2>Soluções</h2>
     <h5>QUER SOLUCIONAR ESSES PROBLEMAS? ESCOLHA AS MELHORES INICIATIVAS OU PROPONHA A SUA.</h5>
 
+    <div class="minha-solucao">
+      <div class="thumb-image">
+        <img src="<?php echo get_template_directory_uri();?>/images/icon-cadastrar.svg" alt="">
+      </div>
+      <div class="content">
+        <p>
+        ~ ~ ~<br>
+        Se você já tem uma iniciativa ou mesmo uma proposta, envie-nos e faça também parte da Aliança da Água!
+        <br>~ ~ ~
+        </p>
+        <a href="javascript:void(0);" class="button carregar-formulario">Quero contribuir</a>
+      </div>
+    </div>
+
     <?php
       // meta_key=votes_count&orderby=meta_value_num&order=DESC&
       $solucoes = query_posts('category=Soluções');
-
-      $i=0;
+      $i = 1;
 
       foreach($solucoes as $solucao):
     ?>
@@ -26,6 +39,7 @@
           </div>
         </div>
       </div>
+
       <?php if ($i % 2): ?>
         </div>
         <div class="content-saiba-mais hide"></div>
@@ -33,4 +47,7 @@
       <?php endif; $i++; ?>
     <?php endforeach; ?>
     </div>
+    <?php if ($i % 2): ?>
+    <div class="content-saiba-mais hide"></div>
+    <?php endif; ?>
 </section>

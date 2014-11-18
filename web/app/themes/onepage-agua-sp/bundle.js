@@ -155,17 +155,25 @@ jQuery(".post-like a").click(function(){
 
 jQuery(".saiba-mais-solucoes").on('click', function (evt) {
   evt.preventDefault();
+
   var el = jQuery(this);
   var post_id = el.data('post_id');
   var box_saiba_mais = el.parent().parent().parent().parent().nextAll('.content-saiba-mais:first');
-  // console.log(el.parent().parent().parent().next('.content-saiba-mais'));
-// console.log(el.parent().parent().parent());
-// console.log(box_saiba_mais);
+
   box_saiba_mais.html('<div class="container">'+jQuery('#solucao-'+post_id).html()+'</div>');
   box_saiba_mais.slideToggle();
+});
 
+jQuery(".carregar-formulario").on('click', function (evt) {
+  evt.preventDefault();
 
-})
+  var el = jQuery(this);
+  console.log(el.parent().parent().parent());
+  var box_saiba_mais = el.parent().parent().parent().nextAll('.content-saiba-mais:first');
+
+  box_saiba_mais.html('<div class="container">'+'testeeeee'+'</div>');
+  box_saiba_mais.slideToggle();
+});
 
 
 
