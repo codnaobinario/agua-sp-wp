@@ -792,33 +792,72 @@ input[type="submit"] {
       font-family: 'the_serif_bold-regular';
       font-size: 1.25em;
       color: #8EC975;
-      font-weight: normal; }
+      font-weight: normal;
+      height: 50px; }
     #solucoes .solucao p {
       font-size: 0.875em; }
-  #solucoes .post-like {
-    display: inline-block; }
-  #solucoes .like {
-    display: block;
-    float: left;
-    margin-right: 4px;
+  #solucoes .button {
+    padding: 10px;
+    font-weight: normal; }
+  #solucoes .button.post-like {
+    background: -62px 7px url("images/icon-like.png") no-repeat;
+    display: inline-block;
+    box-shadow: none;
+    background-color: #8EC975;
+    color: #8EC975;
+    text-align: center;
+    width: 25%;
+    margin-left: 2%;
     -moz-transition: all 0.2s ease-out 0.1s;
     -webkit-transition: all 0.2s ease-out 0.1s;
     -o-transition: all 0.2s ease-out 0.1s; }
-  #solucoes .post-like a:hover .like {
-    background-position: -16px 0; }
-  #solucoes .voted .like, #solucoes article footer .post-like.alreadyvoted {
-    background-position: -32px 0; }
+    #solucoes .button.post-like span {
+      height: 26px;
+      display: block; }
+    #solucoes .button.post-like.alreadyvoted, #solucoes .button.post-like:hover {
+      background-position: 8px 7px;
+      color: #fff; }
+  #solucoes .button.carregar-formulario {
+    display: block;
+    box-shadow: none; }
+  #solucoes .button.saiba-mais-solucoes {
+    display: inline-block;
+    box-shadow: none;
+    background-color: #204667;
+    color: #fff;
+    text-align: center;
+    width: 70%; }
   #solucoes .hide,
   #solucoes .extra {
     display: none; }
   #solucoes .content-saiba-mais {
     float: left;
     clear: both;
-    min-height: 250px;
+    height: 275px;
     width: 100%;
     background-color: #2C5078;
     color: #fff;
-    padding: 1em; }
+    padding: 1em;
+    margin: 1em auto;
+    position: relative; }
+    #solucoes .content-saiba-mais.formulario {
+      height: 750px; }
+    #solucoes .content-saiba-mais .close.slide {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: bold;
+      border: 2px solid #fff;
+      color: #fff;
+      border-radius: 30px;
+      padding: 4px;
+      text-align: center;
+      margin: 1em;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      text-decoration: none;
+      right: 0;
+      top: 0; }
     #solucoes .content-saiba-mais fieldset {
       background: none;
       border: 0; }

@@ -64,38 +64,62 @@
       font-size: em(20px);
       color: #8EC975;
       font-weight: normal;
+      height:50px;
     }
 
     p {
       font-size: em(14px);
     }
-
   }
 
-  .post-like{
-    display: inline-block;
+  .button {
+    padding: 10px;
+    font-weight: normal;
   }
 
-  .like{
-    // background:url(images/icons.png) no-repeat;
-    // width: 15px;
-    // height: 16px;
-    display: block;
-    float:left;
-    margin-right: 4px;
+  .button.post-like {
+    background: -62px 7px url('images/icon-like.png') no-repeat;
+    display:inline-block;
+    box-shadow: none;
+    background-color: #8EC975;
+    color: #8EC975;
+    text-align: center;
+    width: 25%;
+    margin-left: 2%;
     -moz-transition: all 0.2s ease-out 0.1s;
     -webkit-transition: all 0.2s ease-out 0.1s;
-    -o-transition: all 0.2s ease-out 0.1s
+    -o-transition: all 0.2s ease-out 0.1s;
+
+    span {
+      height: 26px;
+      display: block;
+    }
+    &.alreadyvoted,
+    &:hover {
+      background-position: 8px 7px;
+      color: #fff;
+    }
+
+    // &.voted {
+    //   box-shadow: 3px 3px 6px rgba(255,255,255,.5);
+    //   -moz-transition: all 0.2s ease-out 0.1s;
+    //   -webkit-transition: all 0.2s ease-out 0.1s;
+    //   -o-transition: all 0.2s ease-out 0.1s;
+    // }
   }
 
-  .post-like a:hover .like{
-    background-position:-16px 0;
+  .button.carregar-formulario {
+    display:block;
+    box-shadow: none;
   }
-
-  .voted .like, article footer .post-like.alreadyvoted{
-    background-position:-32px 0;
+  .button.saiba-mais-solucoes {
+    display:inline-block;
+    box-shadow: none;
+    background-color: #204667;
+    color: #fff;
+    text-align: center;
+    width: 70%;
   }
-
 
   .hide,
   .extra {
@@ -105,11 +129,36 @@
   .content-saiba-mais {
     float:left;
     clear: both;
-    min-height: 250px;
+    height: 275px;
     width: 100%;
     background-color: #2C5078;
     color: #fff;
     padding: 1em;
+    margin: 1em auto;
+    position: relative;
+
+    &.formulario {
+      height: 750px;
+    }
+
+    .close.slide {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: bold;
+      border: 2px solid #fff; //#8EC975;
+      color: #fff;
+      border-radius: 30px;
+      padding:4px;
+      text-align: center;
+      margin: 1em;
+
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      text-decoration: none;
+      right: 0;
+      top: 0;
+    }
 
     fieldset {
       background: none;

@@ -128,8 +128,8 @@ $('.single-item').slick();
 // $('#modal-industria-seca').modal({opacity: 0.5});
 
 
-jQuery(".post-like a").click(function(){
-
+jQuery(".post-like.couldvote").on('click', function(evt) {
+  evt.preventDefault();
   var heart = jQuery(this);
 
   // Retrieve post ID from data attribute
@@ -144,13 +144,12 @@ jQuery(".post-like a").click(function(){
           // If vote successful
           if(count != "already")
           {
-              heart.addClass("voted");
-              heart.siblings(".count").text(count);
+              heart.addClass("alreadyvoted voted");
+              heart.removeClass("couldvote");
+              heart.find(".count").text(count);
           }
       }
   });
-
-  return false;
 });
 
 jQuery(".saiba-mais-solucoes").on('click', function (evt) {
@@ -161,6 +160,12 @@ jQuery(".saiba-mais-solucoes").on('click', function (evt) {
   var box_saiba_mais = el.parent().parent().parent().parent().nextAll('.content-saiba-mais:first');
 
   box_saiba_mais.html('<div class="container">'+jQuery('#solucao-'+post_id+' .extra').html()+'</div>');
+  box_saiba_mais.find('.close.slide').on('click', function(evt) {
+    evt.preventDefault();
+    // var el = jQuery(this);
+    // var box_saiba_mais = el.parent().parent().parent().nextAll('.content-saiba-mais:first');
+    box_saiba_mais.slideToggle();
+  });
   box_saiba_mais.slideToggle();
 });
 
@@ -175,31 +180,41 @@ jQuery(".carregar-formulario").on('click', function (evt) {
   var el = jQuery(this);
   var box_saiba_mais = el.parent().parent().parent().nextAll('.content-saiba-mais:first');
 
+  box_saiba_mais.addClass('formulario'); // para sempre ter altura definida e a animação ficar melhor
+
   box_saiba_mais.html('<div class="container">'+jQuery('#form-cadastro').html()+'</div>');
-  // jQuery('#form-cadastro').remove();
+
   box_saiba_mais.slideToggle();
-    var options = {
-        target:        '.content-saiba-mais .output1',      // target element(s) to be updated with server response
-        beforeSubmit:  showRequest,     // pre-submit callback
-        success:       showResponse,    // post-submit callback
-        url:    ajax_var.url                 // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-    };
 
-    // bind form using 'ajaxForm'
-    jQuery('.content-saiba-mais .thumbnail_upload').ajaxForm(options);
+  var options = {
+      target:        '.content-saiba-mais .output1',      // target element(s) to be updated with server response
+      beforeSubmit:  showRequest,     // pre-submit callback
+      success:       showResponse,    // post-submit callback
+      url:    ajax_var.url                 // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+  };
 
-    jQuery('.content-saiba-mais input[name="type"]').on('change', function (evt) {
-      if (evt.currentTarget.value == '1') {
-        jQuery('.mostrar-solucao').hide();
-      } else if (evt.currentTarget.value == '2') {
-        jQuery('.mostrar-solucao').show();
-      }
-    })
+  // bind form using 'ajaxForm'
+  jQuery('.content-saiba-mais .thumbnail_upload').ajaxForm(options);
 
+  jQuery('.content-saiba-mais input[name="type"]').on('change', function (evt) {
+    if (evt.currentTarget.value == '1') {
+      jQuery('.mostrar-solucao').hide();
+    } else if (evt.currentTarget.value == '2') {
+      jQuery('.mostrar-solucao').show();
+    }
+  });
+  box_saiba_mais.find('.close').on('click', function(evt) {
+    evt.preventDefault();
+    // var el = jQuery(this);
+    // var box_saiba_mais = el.parent().parent().parent().nextAll('.content-saiba-mais:first');
+    box_saiba_mais.removeClass('formulario');
+    box_saiba_mais.slideToggle();
+  });
 });
 
 function showRequest(formData, jqForm, options) {
 //do extra stuff before submit like disable the submit button
+jQuery('.content-saiba-mais .thumbnail_upload').slideToggle();
 jQuery('.content-saiba-mais .output1').html('Sending...');
 jQuery('.content-saiba-mais .submit-ajax').attr("disabled", "disabled");
 }

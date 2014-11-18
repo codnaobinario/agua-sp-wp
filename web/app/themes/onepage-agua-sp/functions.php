@@ -121,15 +121,22 @@ function getPostLikeLink($post_id)
 
     $vote_count = get_post_meta($post_id, "votes_count", true);
 
-    $output = '<div class="post-like button">';
-    if(hasAlreadyVoted($post_id))
-        $output .= ' <span title="'.__('Eu apoio essa solução.', $themename).'" class="like alreadyvoted"><3</span>';
-    else
-        $output .= '<a href="#" data-post_id="'.$post_id.'">
-                    <span  title="'.__('Eu apoio essa solução.', $themename).'"class="qtip like"><3</span>
-                </a>';
-    $output .= '<span class="count">'.$vote_count.'</span></div>';
+    if (empty($vote_count)) {
+        $vote_count = 0;
+    }
 
+    if(hasAlreadyVoted($post_id)) {
+        // $output .= ' <span title="'.__('Eu apoio essa solução.', $themename).'" class="like alreadyvoted"></span>';
+        $class = 'alreadyvoted';
+    } else {
+        // $output .= '<a href="#" data-post_id="'.$post_id.'">
+        //             <span  title="'.__('Eu apoio essa solução.', $themename).'"class="qtip like couldvote"></span>
+        //         </a>';
+        $class="like couldvote";
+    }
+    $output = '<a class="post-like button '.$class.'" data-post_id="'.$post_id.'" href="javascript: void(0);">';
+    $output .= '<span class="count">'.$vote_count.'</span>';
+    $output .= "</a>";
     return $output;
 }
 

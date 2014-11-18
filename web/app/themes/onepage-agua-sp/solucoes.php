@@ -8,17 +8,17 @@
         <img src="<?php echo get_template_directory_uri();?>/images/icon-cadastrar.svg" alt="">
       </div>
       <div class="content">
-        <p>
-        ~ ~ ~<br>
-        Se você já tem uma iniciativa ou mesmo uma proposta, envie-nos e faça também parte da Aliança da Água!
-        <br>~ ~ ~
-        </p>
+        <p>~ ~ ~</p>
+        <p>Se você já tem uma iniciativa ou mesmo uma proposta, envie-nos e faça também parte da Aliança da Água!</p>
+        <p>~ ~ ~</p>
         <a href="javascript:void(0);" class="button carregar-formulario">Quero contribuir</a>
       </div>
       <div id="form-cadastro" class="hide">
+        <a href="#" class="close slide">X</a>
         <form class="thumbnail_upload" method="post" action="#" enctype="multipart/form-data" >
         <fieldset>
-          <legend>Participe da aliança</legend>
+          <h4>Participe da aliança</h4>
+          <br>
 
           <div class="input radio">
             <label for="">Qual o tipo de solução é a sua?</label>
@@ -28,12 +28,12 @@
 
           <div class="input text">
             <label for="title">Nome</label>
-            <input type="text" name="title">
+            <input type="text" name="title" required>
           </div>
 
           <div class="input text">
             <label for="content">Descrição</label>
-            <textarea name="content"></textarea>
+            <textarea name="content" required></textarea>
           </div>
 
           <div class="input select mostrar-solucao">
@@ -68,8 +68,9 @@
           <input type="hidden" name="action" id="action" value="solucao_upload_action">
 
           <input id="submit-ajax" name="submit-ajax" type="submit" value="Enviar Solução">
+          <button class="close">Cancelar</button>
         </fieldset>
-        <form>
+        </form>
         <div class="output1"></div>
       </div>
     </div>
@@ -94,6 +95,7 @@
             <a href="#" class="saiba-mais-solucoes button" data-post_id="<?php echo $solucao->ID; ?>">Saiba mais</a>
             <?php echo getPostLikeLink($solucao->ID);?>
             <div class="extra">
+              <a href="#" class="close slide">X</a>
               <div class="thumb-image"><?php echo simple_thumb($solucao->ID);?></div>
               <div class="inner-content">
                 <h6><?php echo $solucao->post_title;?></h6>
