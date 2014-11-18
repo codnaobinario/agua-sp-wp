@@ -398,7 +398,10 @@ input[type="submit"] {
     #cadastre-se .container .report-download .report-box {
       width: 19.75em; } }
 #agenda {
-  background: #F0F0F0; }
+  background: #8EC975;
+  color: #fff; }
+  #agenda h2:before {
+    content: url("images/heading-negative.png"); }
   #agenda .actions {
     max-width: 68em;
     margin-left: auto;
@@ -1414,7 +1417,7 @@ header.navigation {
   padding: 3em 1.618em;
   width: 100%; }
   .footer a {
-    color: white;
+    color: #8EC975;
     text-decoration: underline; }
   .footer .container {
     max-width: 68em;
@@ -1460,11 +1463,11 @@ header.navigation {
       .footer li {
         text-align: left; } }
   .footer li a {
-    color: white; }
+    color: #8EC975; }
     .footer li a:hover {
       color: white; }
   .footer p {
-    color: white;
+    color: #fff;
     font-size: .8em;
     line-height: 1.0em; }
 

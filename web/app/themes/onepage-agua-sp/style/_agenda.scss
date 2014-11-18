@@ -1,5 +1,11 @@
 #agenda {
-  background: #F0F0F0;
+  background: #8EC975;
+  color: #fff;
+
+  h2:before {
+    content: url('images/heading-negative.png');
+  }
+
   .actions {
     @include outer-container;
 

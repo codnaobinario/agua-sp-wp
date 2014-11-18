@@ -1,6 +1,6 @@
 .footer {
   $footer-background: url('images/bg-footer.jpg') no-repeat scroll center top / cover;
-  $footer-color: white;
+  $footer-color: #fff;
   $footer-link-color: $footer-color;
   $footer-disclaimer-color: $footer-color;
 
@@ -9,7 +9,7 @@
   width: 100%;
 
   a {
-    color: $footer-color;
+    color: #8EC975;
     text-decoration: underline;
   }
 
@@ -62,7 +62,7 @@
   }
 
   li a {
-    color: $footer-link-color;
+    color: #8EC975;
 
     &:hover {
       color: transparentize($footer-color, 0);
