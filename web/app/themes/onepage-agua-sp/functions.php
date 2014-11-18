@@ -1,5 +1,7 @@
 <?php
 
+show_admin_bar(false);
+
 function themeslug_enqueue_script() {
     // wp_enqueue_script( 'jquery' );
     // wp_enqueue_script( 'jquery-form',array('jquery'),false,true );
@@ -95,12 +97,12 @@ function hasAlreadyVoted($post_id)
     // If user has already voted
     if(in_array($ip, array_keys($voted_IP)))
     {
-        $time = $voted_IP[$ip];
-        $now = time();
+        // $time = $voted_IP[$ip];
+        // $now = time();
 
-        // Compare between current time and vote time
-        if(round(($now - $time) / 60) > $timebeforerevote)
-            return false;
+        // // Compare between current time and vote time
+        // if(round(($now - $time) / 60) > $timebeforerevote)
+        //     return false;
 
         return true;
     }
