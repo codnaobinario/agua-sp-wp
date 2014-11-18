@@ -83,6 +83,10 @@
       .registry,
       .report-download {
         @include span-columns(12);
+        .report-box {
+          width: 19.75em;
+        }
+
       }
     }
   }

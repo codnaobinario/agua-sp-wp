@@ -24,7 +24,7 @@
     }
 
     .thumb-image {
-      box-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
+      border: 1px solid #fff;
       text-align: center;
       img {
         margin: 3.2em 0;
@@ -188,6 +188,75 @@
     }
     .inner-content {
       @include span-columns(9);
+    }
+  }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #solucoes {
+    .button.post-like.alreadyvoted,
+    .button.post-like:hover {
+      background-position: 19px 7px;
+    }
+
+    #solucoes .button.post-like {
+      background-position: -51px 7px;
+    }
+
+    .minha-solucao,
+    .solucao {
+      width: 98%;
+
+      .thumb-image {
+        img {
+          width: 100%;
+        }
+      }
+
+      .thumb-image,
+      .content,
+      .inner-content {
+        width : 98%;
+      }
+    }
+
+    .content-saiba-mais {
+      height: auto;
+      .close.slide {
+        background-color: #fff;
+        color: #8EC975;
+      }
+      .thumb-image {
+        @include span-columns(12);
+
+        img {
+          width: 100%;
+        }
+      }
+      .inner-content {
+        @include span-columns(12);
+      }
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 480px) and (max-width: 640px) {
+  #solucoes {
+    .minha-solucao,
+    .solucao {
+      width: 98%;
+    }
+
+    .button.post-like.alreadyvoted,
+    .button.post-like:hover {
+      background-position: 17px 7px;
+    }
+
+    #solucoes .button.post-like {
+      background-position: -52px 7px;
     }
   }
 }

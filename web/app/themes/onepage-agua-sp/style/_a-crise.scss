@@ -103,10 +103,27 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  #a-crise .slider ul.colunas {
-    columns: 1;
-    -webkit-columns: 1;
-    -moz-columns: 1;
+  #a-crise {
+    .slider ul.colunas {
+      columns: 1;
+      -webkit-columns: 1;
+      -moz-columns: 1;
+    }
+
+    .slider .texto-destaque h3,
+    .slider .texto-destaque .container section h2,
+    .container section #a-crise .slider .texto-destaque h2 {
+      line-height: 1.3em;
+    }
+    .report-download {
+      margin-top: .5em;
+    }
+
+    .report-box {
+      width: 21em;
+      line-height: 1.3em;
+      padding: 1em;
+    }
   }
 
   .slide {
