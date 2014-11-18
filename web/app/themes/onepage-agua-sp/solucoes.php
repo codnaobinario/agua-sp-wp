@@ -15,6 +15,16 @@
         </p>
         <a href="javascript:void(0);" class="button carregar-formulario">Quero contribuir</a>
       </div>
+      <div id="form-cadastro" class="hide">
+        <form class="thumbnail_upload" method="post" action="#" enctype="multipart/form-data" >
+          <input type="file" name="thumbnail" id="thumbnail">
+          <input type='hidden' value='<?php echo wp_create_nonce( 'upload_thumb' ); ?>' name='nonce' />
+          <input type="hidden" name="post_id" id="post_id" value="POSTID">
+          <input type="hidden" name="action" id="action" value="solucao_upload_action">
+          <input id="submit-ajax" name="submit-ajax" type="submit" value="upload">
+        <form>
+        <div class="output1"></div>
+      </div>
     </div>
 
     <?php

@@ -1,6 +1,8 @@
 <?php
 
 function themeslug_enqueue_script() {
+    // wp_enqueue_script( 'jquery' );
+    // wp_enqueue_script( 'jquery-form',array('jquery'),false,true );
     wp_register_script( 'bundlejs', get_template_directory_uri().'/bundle.js' );
     wp_localize_script('bundlejs', 'ajax_var', array(
         'url' => admin_url('admin-ajax.php'),
@@ -9,7 +11,6 @@ function themeslug_enqueue_script() {
 
     wp_enqueue_script('bundlejs', get_template_directory_uri().'/bundle.js', array(), '0.1', true );
 }
-
 
 add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_script' );
 
@@ -123,4 +124,44 @@ function getPostLikeLink($post_id)
     $output .= '<span class="count">'.$vote_count.'</span></p>';
 
     return $output;
+}
+
+
+
+
+//hook the Ajax call
+//for logged-in users
+add_action('wp_ajax_solucao_upload_action', 'solucao_ajax_upload');
+//for none logged-in users
+add_action('wp_ajax_nopriv_solucao_upload_action', 'solucao_ajax_upload');
+
+function solucao_ajax_upload(){
+//simple Security check
+    $nonce = $_POST['nonce'];
+    if ( ! wp_verify_nonce( $nonce, 'upload_thumb' ) )
+        die ( 'Busted!');
+
+    //insert POST data
+
+
+    $post_id = $_POST['post_id'];
+
+//require the needed files
+    require_once(ABSPATH . "wp-admin" . '/includes/image.php');
+    require_once(ABSPATH . "wp-admin" . '/includes/file.php');
+    require_once(ABSPATH . "wp-admin" . '/includes/media.php');
+//then loop over the files that were sent and store them using  media_handle_upload();
+    if ($_FILES) {
+        foreach ($_FILES as $file => $array) {
+            if ($_FILES[$file]['error'] !== UPLOAD_ERR_OK) {
+                echo "upload error : " . $_FILES[$file]['error'];
+                die();
+            }
+            $attach_id = media_handle_upload( $file, $post_id );
+        }
+    }
+//and if you want to set that image as Post  then use:
+  update_post_meta($post_id,'_thumbnail_id',$attach_id);
+  echo "uploaded the new Thumbnail";
+  die();
 }

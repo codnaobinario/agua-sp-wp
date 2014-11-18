@@ -2,6 +2,7 @@
 var $ = require('jquery');
 window.jQuery = $;
 
+var form = require('./vendor/form/jquery.form');
 var modal = require('./vendor/jquery-modal/jquery.modal.min');
 var slick = require('./vendor/slick/slick.min');
 
@@ -170,10 +171,29 @@ jQuery(".carregar-formulario").on('click', function (evt) {
   console.log(el.parent().parent().parent());
   var box_saiba_mais = el.parent().parent().parent().nextAll('.content-saiba-mais:first');
 
-  box_saiba_mais.html('<div class="container">'+'testeeeee'+'</div>');
+  box_saiba_mais.html('<div class="container">'+jQuery('#form-cadastro').html()+'</div>');
+  // jQuery('#form-cadastro').remove();
   box_saiba_mais.slideToggle();
+    var options = {
+        target:        '.content-saiba-mais .output1',      // target element(s) to be updated with server response
+        beforeSubmit:  showRequest,     // pre-submit callback
+        success:       showResponse,    // post-submit callback
+        url:    ajax_var.url                 // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+    };
+
+    // bind form using 'ajaxForm'
+    jQuery('.content-saiba-mais .thumbnail_upload').ajaxForm(options);
+
+
 });
 
-
+function showRequest(formData, jqForm, options) {
+//do extra stuff before submit like disable the submit button
+jQuery('.content-saiba-mais .output1').html('Sending...');
+jQuery('.content-saiba-mais .submit-ajax').attr("disabled", "disabled");
+}
+function showResponse(responseText, statusText, xhr, $form)  {
+//do extra stuff after submit
+}
 
 
