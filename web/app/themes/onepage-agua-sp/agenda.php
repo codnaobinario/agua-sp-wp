@@ -4,7 +4,11 @@
 <section id="agenda" class="tinted">
   <div class="container">
     <h2><?php echo $agenda->post_title;?></h2>
-    <?php echo $agenda->post_content;?>
+
+    <div class="box-featured">
+      <?php echo $agenda->post_content;?>
+    </div>
+
     <div class="actions">
       <div class="type">
         <?php echo $urgentes->post_content;?>
