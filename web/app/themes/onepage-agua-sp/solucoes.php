@@ -83,8 +83,9 @@
       $i = 1;
 
       foreach($solucoes as $solucao): setup_postdata( $post );
+      $category = get_the_category($solucao->ID);
     ?>
-      <div class="solucao">
+      <div class="solucao <?php echo $category[0]->slug; ?>">
         <div class="info" id="solucao-<?php echo $solucao->ID; ?>">
           <div class="thumb-image">
             <?php echo simple_thumb($solucao->ID);?>
@@ -100,10 +101,15 @@
               <div class="inner-content">
                 <h6><?php echo $solucao->post_title;?></h6>
                 <p><?php echo $solucao->post_content;?></p>
-                <p><strong>Categoria: </strong><span><?php the_terms($solucao->ID, 'categorias_solucao', '', ', ' ); ?></span></p>
-                <p><strong>Instiuição: </strong><span><?php echo get_post_meta( $solucao->ID, 'instituicao', true ); ?></span></p>
-                <?php $url = get_post_meta( $solucao->ID, 'url', true ); ?>
-                <p><strong>URL: </strong><a href="<?php echo $url; ?>"><?php echo $url; ?></a></p>
+                <?php
+                // echo $category[0]->cat_name;
+                if ($category[0]->cat_name == 'Iniciativa') {
+                ?>
+                  <p><strong>Categoria: </strong><span><?php the_terms($solucao->ID, 'categorias_solucao', '', ', ' ); ?></span></p>
+                  <p><strong>Instiuição: </strong><span><?php echo get_post_meta( $solucao->ID, 'instituicao', true ); ?></span></p>
+                  <?php $url = get_post_meta( $solucao->ID, 'url', true ); ?>
+                  <p><strong>URL: </strong><a href="<?php echo $url; ?>"><?php echo $url; ?></a></p>
+                <?php } ?>
               </div>
             </div>
           </div>

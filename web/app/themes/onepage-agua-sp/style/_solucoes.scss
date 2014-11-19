@@ -59,6 +59,7 @@
       @include span-columns(6);
       @include omega(2n);
     }
+
     h6 {
       font-family: 'the_serif_bold-regular';
       font-size: em(20px);
@@ -69,6 +70,21 @@
 
     p {
       font-size: em(14px);
+    }
+
+    &.propostas {
+      .thumb-image,
+      .content {
+        @include span-columns(12);
+
+        p {
+          height: 8.8em;
+        }
+      }
+
+      .button.post-like {
+        width: 12%;
+      }
     }
   }
 

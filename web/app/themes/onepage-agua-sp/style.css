@@ -824,6 +824,20 @@ input[type="submit"] {
       height: 50px; }
     #solucoes .solucao p {
       font-size: 0.875em; }
+    #solucoes .solucao.propostas .thumb-image,
+    #solucoes .solucao.propostas .content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #solucoes .solucao.propostas .thumb-image:last-child,
+      #solucoes .solucao.propostas .content:last-child {
+        margin-right: 0; }
+      #solucoes .solucao.propostas .thumb-image p,
+      #solucoes .solucao.propostas .content p {
+        height: 8.8em; }
+    #solucoes .solucao.propostas .button.post-like {
+      width: 12%; }
   #solucoes .button {
     padding: 10px;
     font-weight: normal; }
