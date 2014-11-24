@@ -53,6 +53,7 @@
     border-radius: 20px;
     padding: 1em;
     color: #fff;
+    position: relative;
 
     .thumb-image,
     .content {
@@ -72,14 +73,30 @@
       font-size: em(14px);
     }
 
+    .badge {
+      position: absolute;
+      width: 143px;
+      height: 48px;
+      left: -3px;
+      text-indent: -9999px;
+      background: top left url('images/icon-iniciativas.png') transparent no-repeat;
+    }
+
     &.propostas {
+      .badge {
+        background-image: url('images/icon-propostas.png');
+      }
       .thumb-image,
       .content {
         @include span-columns(12);
 
         p {
-          height: 8.8em;
+          height: 4em;
         }
+      }
+
+      .info {
+        margin-top: 3.4em;
       }
 
       .button.post-like {

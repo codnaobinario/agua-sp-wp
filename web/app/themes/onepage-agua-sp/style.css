@@ -800,7 +800,8 @@ input[type="submit"] {
     background-color: #2C5078;
     border-radius: 20px;
     padding: 1em;
-    color: #fff; }
+    color: #fff;
+    position: relative; }
     #solucoes .solucao .thumb-image,
     #solucoes .solucao .content {
       float: left;
@@ -824,6 +825,15 @@ input[type="submit"] {
       height: 50px; }
     #solucoes .solucao p {
       font-size: 0.875em; }
+    #solucoes .solucao .badge {
+      position: absolute;
+      width: 143px;
+      height: 48px;
+      left: -3px;
+      text-indent: -9999px;
+      background: top left url("images/icon-iniciativas.png") transparent no-repeat; }
+    #solucoes .solucao.propostas .badge {
+      background-image: url("images/icon-propostas.png"); }
     #solucoes .solucao.propostas .thumb-image,
     #solucoes .solucao.propostas .content {
       float: left;
@@ -835,7 +845,9 @@ input[type="submit"] {
         margin-right: 0; }
       #solucoes .solucao.propostas .thumb-image p,
       #solucoes .solucao.propostas .content p {
-        height: 8.8em; }
+        height: 4em; }
+    #solucoes .solucao.propostas .info {
+      margin-top: 3.4em; }
     #solucoes .solucao.propostas .button.post-like {
       width: 12%; }
   #solucoes .button {
@@ -910,7 +922,8 @@ input[type="submit"] {
       font-size: 1.5em;
       margin-bottom: 1em; }
     #solucoes .content-saiba-mais p {
-      font-size: 0.875em; }
+      font-size: 0.875em;
+      margin: 0 0 0.3em; }
     #solucoes .content-saiba-mais .extra {
       display: block; }
     #solucoes .content-saiba-mais .thumb-image {

@@ -86,6 +86,7 @@
       $category = get_the_category($solucao->ID);
     ?>
       <div class="solucao <?php echo $category[0]->slug; ?>">
+        <div class="badge"><?php echo $category[0]->cat_name; ?></div>
         <div class="info" id="solucao-<?php echo $solucao->ID; ?>">
           <div class="thumb-image">
             <?php echo simple_thumb($solucao->ID);?>
@@ -102,8 +103,7 @@
                 <h6><?php echo $solucao->post_title;?></h6>
                 <p><?php echo $solucao->post_content;?></p>
                 <?php
-                // echo $category[0]->cat_name;
-                if ($category[0]->cat_name == 'Iniciativa') {
+                if ($category[0]->cat_name == 'Iniciativas') {
                 ?>
                   <p><strong>Categoria: </strong><span><?php the_terms($solucao->ID, 'categorias_solucao', '', ', ' ); ?></span></p>
                   <p><strong>Instiuição: </strong><span><?php echo get_post_meta( $solucao->ID, 'instituicao', true ); ?></span></p>
