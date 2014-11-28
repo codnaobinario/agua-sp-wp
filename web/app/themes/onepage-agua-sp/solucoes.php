@@ -60,7 +60,7 @@
           </div>
 
           <div class="input file mostrar-solucao">
-            <label for="thumbnail">Imagem representativa</label>
+            <label for="thumbnail">Imagem representativa (150x150)</label>
             <input type="file" name="thumbnail" id="thumbnail">
           </div>
 
