@@ -25,8 +25,9 @@ add_theme_support('post-thumbnails');
 
 function simple_thumb($id) {
 
-  $img = get_the_post_thumbnail($id, 'full');
-  return preg_replace('/(height|width)="\d*"/', '', $img);
+  $img = get_the_post_thumbnail($id, 'thumbnail');
+  // return preg_replace('/(height|width)="\d*"/', '', $img);
+  return $img;
 }
 
 add_action('wp_ajax_nopriv_post-like', 'post_like');

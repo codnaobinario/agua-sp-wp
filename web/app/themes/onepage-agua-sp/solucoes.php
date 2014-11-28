@@ -79,7 +79,7 @@
 
 
       // meta_key=votes_count&orderby=meta_value_num&order=DESC&
-      $solucoes = get_posts('post_type=solucao&posts_per_page=0');
+      $solucoes = get_posts('post_type=solucao&posts_per_page=100');
       $i = 1;
 
       foreach($solucoes as $solucao): setup_postdata( $post );

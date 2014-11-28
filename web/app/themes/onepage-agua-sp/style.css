@@ -817,6 +817,10 @@ input[type="submit"] {
       #solucoes .solucao .thumb-image:nth-child(2n+1),
       #solucoes .solucao .content:nth-child(2n+1) {
         clear: left; }
+    #solucoes .solucao .thumb-image {
+      text-align: center; }
+      #solucoes .solucao .thumb-image img {
+        margin: 4em auto 0; }
     #solucoes .solucao h6 {
       font-family: 'the_serif_bold-regular';
       font-size: 1.25em;
@@ -950,9 +954,6 @@ input[type="submit"] {
   #solucoes .minha-solucao,
   #solucoes .solucao {
     width: 98%; }
-    #solucoes .minha-solucao .thumb-image img,
-    #solucoes .solucao .thumb-image img {
-      width: 100%; }
     #solucoes .minha-solucao .thumb-image,
     #solucoes .minha-solucao .content,
     #solucoes .minha-solucao .inner-content,

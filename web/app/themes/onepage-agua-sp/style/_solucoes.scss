@@ -61,6 +61,15 @@
       @include omega(2n);
     }
 
+    .thumb-image {
+      text-align: center;
+      img {
+        margin: 4em auto 0;
+      }
+    }
+
+
+
     h6 {
       font-family: 'the_serif_bold-regular';
       font-size: em(20px);
@@ -244,7 +253,7 @@
 
       .thumb-image {
         img {
-          width: 100%;
+          // width: 100%;
         }
       }
 
