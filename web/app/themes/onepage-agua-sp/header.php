@@ -27,7 +27,7 @@
   <meta property="og:site_name" content="<?php bloginfo('title'); ?>">
   <meta property="fb:admins" content="">
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/style.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/style.css?v=20150209">
 
   <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri();?>/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
