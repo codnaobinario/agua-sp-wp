@@ -279,6 +279,8 @@ input[type="submit"] {
       display: block;
       margin-right: 2.35765%;
       width: 31.76157%; }
+      #parceiros .logos .logo img {
+        max-height: 100%; }
       #parceiros .logos .logo:last-child {
         margin-right: 0; }
       @media screen and (min-width: 40em) {
