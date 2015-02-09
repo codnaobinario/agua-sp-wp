@@ -367,12 +367,12 @@ input[type="submit"] {
 .report-box {
   display: block;
   width: 23.75em;
-  height: 10em;
-  margin: 1.3em auto 0;
-  border: 20px solid #6EA74A;
+  height: 7em;
+  margin: .7em auto 0;
+  border: 15px solid #6EA74A;
   background-color: #2C5078;
   color: #fff;
-  line-height: 7em;
+  line-height: 5em;
   text-align: center; }
   .report-box img, .report-box span {
     vertical-align: middle;
@@ -1582,32 +1582,32 @@ body {
   -ms-border-radius: 8px;
   border-radius: 8px; }
 
-#modal-industria-seca {
-  width: 800px; }
+#modal-content {
+  width: 820px; }
 
-#modal-industria-seca .content {
+#modal-content .content {
   height: 460px;
   overflow: auto; }
 
-#modal-industria-seca .content .lista li {
+#modal-content .content .lista li {
   list-style: square;
   display: block; }
 
-#modal-industria-seca .content .center {
+#modal-content .content .center {
   text-align: center; }
 
-#modal-industria-seca .content h1 {
+#modal-content .content h1 {
   font-size: 30px;
   line-height: 30px;
   margin-bottom: 18px; }
 
-#modal-industria-seca .content h2 {
+#modal-content .content h2 {
   font-size: 18px;
   line-height: 18px;
   margin-bottom: 18px; }
 
 @media screen and (min-width: 320px) and (max-width: 640px) {
-  #modal-industria-seca {
+  #modal-content {
     width: 320px; } }
 textarea,
 input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],

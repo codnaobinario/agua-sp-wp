@@ -27,6 +27,16 @@
         <img src="<?php echo get_template_directory_uri();?>/images/report-icon.svg">
         <span>Carta da aliança</span>
       </a>
+
+      <?php
+      $apoiar = get_page_by_title('Carta');
+      $attachments = get_posts(array('post_type' => 'attachment', 'post_parent' => $apoiar->ID));
+      $report = reset($attachments);
+      ?>
+      <a href="<?php echo $report->guid;?>" class="report-box">
+        <img src="<?php echo get_template_directory_uri();?>/images/report-icon.svg">
+        <span>Plano de emergência</span>
+      </a>
     </div>
   </div>
 </section>

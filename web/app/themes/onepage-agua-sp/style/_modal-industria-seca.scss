@@ -1,33 +1,33 @@
-#modal-industria-seca {
-  width: 800px;
+#modal-content {
+  width: 820px;
 }
 
-#modal-industria-seca .content {
+#modal-content .content {
   height: 460px;
   overflow: auto;
 }
 
-#modal-industria-seca .content .lista li {
+#modal-content .content .lista li {
   list-style: square;
   display: block;
 }
-#modal-industria-seca .content .center {
+#modal-content .content .center {
   text-align: center;
 }
 
-#modal-industria-seca .content h1 {
+#modal-content .content h1 {
   font-size: 30px;
   line-height: 30px;
   margin-bottom: 18px;
 }
-#modal-industria-seca .content h2 {
+#modal-content .content h2 {
   font-size: 18px;
   line-height: 18px;
   margin-bottom: 18px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 640px) {
-  #modal-industria-seca {
+  #modal-content {
     width: 320px;
   }
 }

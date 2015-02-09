@@ -3,6 +3,7 @@ var $ = require('jquery');
 window.jQuery = $;
 
 var form = require('./vendor/form/jquery.form');
+var modal = require('./vendor/jquery-modal/jquery.modal.min');
 var slick = require('./vendor/slick/slick.min');
 
   'use strict';
@@ -124,6 +125,7 @@ function render() {
 
 $('.single-item').slick();
 
+$('#modal-content').modal({opacity: 0.5});
 
 jQuery(".post-like.couldvote").on('click', function(evt) {
   evt.preventDefault();

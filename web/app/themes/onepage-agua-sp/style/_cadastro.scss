@@ -52,14 +52,15 @@
 
 .report-box {
   display: block;
-  width: em(380px);
-  height: em(160px);
-  margin: 1.3em auto 0;
-  border: 20px solid #6EA74A;
+  width: 23.75em;
+  height: 7em;
+  margin: .7em auto 0;
+  border: 15px solid #6EA74A;
   background-color: #2C5078;
   color: #fff;
-  line-height: 7em;
+  line-height: 5em;
   text-align: center;
+
   img,span {
     vertical-align: middle;
     font-size: 1.5em;

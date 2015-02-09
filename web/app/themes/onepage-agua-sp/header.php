@@ -38,6 +38,18 @@
 </head>
 <body>
 
+  <div id="modal-content" class="modal">
+    <div class="content">
+      <?php
+        $page = get_page_by_title( 'Carta' );
+        if (count($page) > 0) {
+          $content = get_post($page->ID);
+          echo $content->post_content;
+        }
+      ?>
+    </div>
+  </div>
+
   <header class="navigation">
     <div class="navigation-wrapper">
       <a href="<?php bloginfo('url'); ?>" class="logo">
