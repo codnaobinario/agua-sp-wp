@@ -1,6 +1,15 @@
-<?php 
+<?php
 $page = get_page_by_title('Parceiros');
-$parceiros = get_attached_media('image', $page->ID);
+// $parceiros = get_attached_media('image', $page->ID);
+// var_dump($page);exit;
+$parceiros = get_children( array(
+  'post_parent'    => $page->ID,
+  'post_status'    => 'inherit',
+  'post_type'      => 'attachment',
+  'post_mime_type' => 'image',
+  'order'          => 'asc',
+  'orderby'        => 'title',
+) );
 ?>
 <section id="parceiros">
   <div class="container">
