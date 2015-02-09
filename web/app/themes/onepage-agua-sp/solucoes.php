@@ -82,7 +82,7 @@
       $solucoes = get_posts('post_type=solucao&posts_per_page=100');
       $i = 1;
 
-      foreach($solucoes as $solucao): setup_postdata( $post );
+      foreach($solucoes as $solucao): setup_postdata( $solucao );
       $category = get_the_category($solucao->ID);
     ?>
       <div class="solucao <?php echo $category[0]->slug; ?>">
