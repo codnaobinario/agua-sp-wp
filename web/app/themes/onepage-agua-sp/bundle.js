@@ -166,7 +166,8 @@ jQuery(".saiba-mais-solucoes").on('click', function (evt) {
     // var box_saiba_mais = el.parent().parent().parent().nextAll('.content-saiba-mais:first');
     box_saiba_mais.slideToggle();
   });
-  box_saiba_mais.slideToggle();
+  jQuery('.content-saiba-mais').not(box_saiba_mais).slideUp();
+  box_saiba_mais.slideDown();
 });
 
 jQuery(".carregar-formulario").on('click', function (evt) {
