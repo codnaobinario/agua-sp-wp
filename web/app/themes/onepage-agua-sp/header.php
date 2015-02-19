@@ -59,6 +59,7 @@
       <div class="nav">
         <ul id="navigation-menu">
           <li class="nav-link"><a href="#cadastre-se">assine</a></li>
+          <li class="nav-link"><a href="#novidades">novidades</a></li>
           <li class="nav-link"><a href="#a-crise">crise</a></li>
           <li class="nav-link"><a href="#agenda">agenda mínima</a></li>
           <li class="nav-link"><a href="#solucoes">soluções</a></li>
